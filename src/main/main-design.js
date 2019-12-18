@@ -8,6 +8,21 @@ export default function MainDesign() {
             <div className="body-title">
                 <h4> Heroes of Might and Magic III calculator </h4>
             </div>
+            {/* TODO select one of the blocks and create logic */}
+            <div className="body-block">
+                <div className="body-block__monster">
+                </div>
+
+                <div className="body-block__quantity">
+
+                </div>
+                <div className="body-block__">
+
+                </div>
+                <div className="body-block__">
+
+                </div>
+            </div>
         </div>
     )
 }
