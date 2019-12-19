@@ -2,9 +2,9 @@ import React from "react";
 
 import { CreatureDesign } from "../creature/creature-design";
 
-import "./main-design.scss";
 import { AppHistory } from "@routing/app-history";
 import { AppRoutesPaths } from "@routing/app-routes-paths";
+import "./main-design.scss";
 
 export const MainDesign: React.FC = () => {
     return (

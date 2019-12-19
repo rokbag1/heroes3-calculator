@@ -1,3 +1,4 @@
+//Create browser history, don't edit it, this file is just for fun :)
 import { createBrowserHistory, BrowserHistoryBuildOptions, History } from "history";
 
 export class AppHistoryManager {
