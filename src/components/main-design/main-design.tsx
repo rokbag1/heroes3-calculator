@@ -1,8 +1,10 @@
 import React from "react";
 
-import { CreatureDesign } from "./creature/creature-design";
+import { CreatureDesign } from "../creature/creature-design";
 
 import "./main-design.scss";
+import { AppHistory } from "@routing/app-history";
+import { AppRoutesPaths } from "@routing/app-routes-paths";
 
 export const MainDesign: React.FC = () => {
     return (
@@ -10,6 +12,9 @@ export const MainDesign: React.FC = () => {
         <div className="body-class">
             <div className="body-title">
                 <h4> Heroes of Might and Magic III calculator </h4>
+                <button type="button" onClick={() => AppHistory.push(AppRoutesPaths.mainApp.templateRoute)}>
+                    PUSH NEXT ROUTE
+                </button>
             </div>
 
             {/* TODO select one of the blocks and create logic */}

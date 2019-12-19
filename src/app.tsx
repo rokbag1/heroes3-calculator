@@ -3,8 +3,8 @@ import "@babel/polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { MainDesign } from "./main/main-design";
+import { AppRouter } from "@routing/app-router";
 
 import "./styles/main.scss";
 
-ReactDOM.render(<MainDesign />, document.getElementById("root"));
+ReactDOM.render(<AppRouter />, document.getElementById("root"));

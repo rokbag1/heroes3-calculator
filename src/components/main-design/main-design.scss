@@ -1,0 +1,26 @@
+.body-block {
+    display: flex;
+    justify-content: flex-start;
+    background-color: aqua;
+    max-height: 400px;
+    height: 100%;
+    justify-content: flex-start;
+
+    margin-top: 50px;
+
+    &__creature {
+        margin: 30px;
+        width: 33.33%;
+        background-color: blue;
+    }
+
+    &__quantity {
+        width: 33.33%;
+        background-color: red;
+    }
+
+    &__item {
+        width: 33.33%;
+        background-color: green;
+    }
+}
