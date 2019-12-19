@@ -1,0 +1,43 @@
+.spinner-loader {
+    .loader,
+    .loader:after {
+        border-radius: 50%;
+        width: 10em;
+        height: 10em;
+    }
+
+    .loader {
+        margin: 1rem auto;
+        font-size: 0.425rem;
+        position: relative;
+        text-indent: -9999em;
+        border-top: 1.1em solid #e1e1e1;
+        border-right: 1.1em solid #e1e1e1;
+        border-bottom: 1.1em solid #e1e1e1;
+        border-left: 1.1em solid #00003c;
+        transform: translateZ(0);
+        animation: spinner-loader 1.1s infinite linear;
+    }
+
+    @keyframes spinner-loader {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &.inner {
+        text-align: center;
+        width: inherit;
+    }
+}
+
+.table-loader {
+    .loader {
+        border-top: 1.1em solid #cacaca;
+        border-right: 1.1em solid #cacaca;
+        border-bottom: 1.1em solid #cacaca;
+    }
+}
