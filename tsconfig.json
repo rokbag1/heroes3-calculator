@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "target": "es6",
+        "strict": true,
+        "esModuleInterop": true,
+        "rootDir": "src",
+        "outDir": "dist",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "noUnusedLocals": true,
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "paths": {
+            "@modules/*": ["src/modules/*"],
+            "@styles/*": ["src/styles/*"],
+            "@routing/*": ["src/routing/*"],
+            "@utils/*": ["src/utils/*"],
+            "@app/config": ["src/config.ts"]
+        }
+    },
+    "exclude": ["node_modules", "dist"]
+}

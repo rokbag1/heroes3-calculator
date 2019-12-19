@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+body {
+    background-image: url("../images/heroes-main-background.jpg");
+}
+
+.body-title {
+    font-size: $title-font;
+    margin-top: 50px;
+
+    width: 100%;
+    text-align: center;
+}
