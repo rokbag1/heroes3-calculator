@@ -1,47 +1,39 @@
 {
-  "name": "heroes3-calculator",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.0.24",
-    "@types/node": "^12.12.21",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "node-sass": "^4.13.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
-    "typescript": "^3.7.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
-    "eslint": "^6.7.2",
-    "eslint-loader": "^3.0.3",
-    "eslint-plugin-react": "^7.17.0"
-  }
+    "name": "heroes-3-calculator",
+    "description": "Heroes 3 Calculator",
+    "private": true,
+    "scripts": {
+        "build": "webpack --config webpack.config.js",
+        "test": "tsc -p . --noEmit && eslint \"src/**/*.ts*\"",
+        "watch": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+        "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+        "serve:prod": "npm run build:prod && cross-env NODE_ENV=production webpack-dev-server --config webpack.config.js",
+        "start": "npm run watch"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@reactway/eslint-config": "1.0.0-alpha",
+        "@reactway/webpack-builder": "2.0.0",
+        "@reactway/webpack-builder-plugin-clean": "2.0.0",
+        "@reactway/webpack-builder-plugin-html": "2.0.0",
+        "@reactway/webpack-builder-plugin-images": "2.0.0",
+        "@reactway/webpack-builder-plugin-styles": "2.0.0",
+        "@reactway/webpack-builder-plugin-typescript": "2.0.0",
+        "@reactway/webpack-builder-plugin-web-dev": "2.0.0",
+        "@reactway/webpack-builder-plugin-write-file": "2.0.0",
+        "@types/react": "16.9.4",
+        "@types/react-dom": "16.9.1",
+        "cross-env": "6.0.2",
+        "node-sass": "4.12.0",
+        "typescript": "3.7.3",
+        "eslint": "6.5.1",
+        "webpack": "4.41.0",
+        "webpack-cli": "3.3.9",
+        "webpack-dev-server": "3.8.1"
+    },
+    "dependencies": {
+        "react": "16.8.6",
+        "react-dom": "16.8.6",
+        "@babel/polyfill": "7.6.0"
+    }
 }
