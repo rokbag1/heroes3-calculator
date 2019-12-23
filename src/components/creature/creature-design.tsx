@@ -4,7 +4,7 @@ export interface Castle  {
     id: number;
     name: string;
     keyWord: string;
-    folder: string;
+    town: string;
 };
 
 const castles: Castle[] = [
@@ -12,89 +12,88 @@ const castles: Castle[] = [
         id: 1,
         name: "Castle",
         keyWord: "CA",
-        folder: "castle"
+        town: "castle"
     },
 
     {
         id: 2,
         name: "Conflux",
         keyWord: "CA",
-        folder: "castle"
+        town: "conflux"
     },
 
     {
         id: 3,
         name: "Cove",
         keyWord: "CA",
-        folder: "castle"
+        town: "cove"
     }, 
 
     {
         id: 4,
         name: "Fortress",
         keyWord: "CA",
-        folder: "castle"
+        town: "fortress"
     },
 
     {
         id: 5,
         name: "Inferno",
         keyWord: "CA",
-        folder: "castle"
+        town: "inferno"
     },
 
     {
         id: 6,
         name: "Necropolis",
         keyWord: "CA",
-        folder: "castle"
+        town: "necropolis"
     },
-
-    {
-        id: 7,
-        name: "Neutral",
-        keyWord: "CA",
-        folder: "castle"
-    },
+    // CAnt find neutral 
+    // {
+    //     id: 7,
+    //     name: "Neutral",
+    //     keyWord: "CA",
+    //     town: "neutral"
+    // },
 
     {
         id: 8,
         name: "Rampart",
         keyWord: "CA",
-        folder: "castle"
+        town: "rampart"
     },
 
     {
         id: 9,
         name: "Stronghold",
         keyWord: "CA",
-        folder: "castle"
+        town: "stronghold"
     },
 
     {
         id: 10,
         name: "Tower",
         keyWord: "CA",
-        folder: "castle"
+        town: "tower"
     },
 
     {
         id: 11,
         name: "Dungeon",
         keyWord: "CA",
-        folder: "castle"
+        town: "dungeon"
     },
     
 ];
 
 //THATS how react is working with object arrays
-const RenderList = (): JSX.Element => (
-    <select>
+const SelectCastle = (): JSX.Element => (
+    <div className="castle-images">
         {castles.map(item => (
-            <option style={{backgroundImage: "url(@images/towns/castle.gif)"}} key={item.id} value={item.name}>
-            </option>
+            <div className="castle-image" key={item.id}><img src={`src/images/towns/${item.town}.gif`} alt="image" /></div>
         ))}
-    </select>
+    </div>
 );
 
 export const CreatureDesign: React.FC = () => {
@@ -102,7 +101,8 @@ export const CreatureDesign: React.FC = () => {
     // React way foreach elements
     return (
         <div>
-            <RenderList />
+            <div className="select-castle">First select town</div>
+            <SelectCastle />
         </div>
     );
 };
