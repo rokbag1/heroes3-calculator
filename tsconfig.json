@@ -19,6 +19,7 @@
             "@styles/*": ["src/styles/*"],
             "@routing/*": ["src/routing/*"],
             "@utils/*": ["src/utils/*"],
+            "@images": ["src/images/*"],
             "@app/config": ["src/config.ts"]
         }
     },

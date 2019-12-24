@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .body-block {
     display: flex;
     justify-content: flex-start;
@@ -5,13 +7,10 @@
     max-height: 400px;
     height: 100%;
     justify-content: flex-start;
-
     margin-top: 50px;
 
     &__creature {
         margin: 30px;
-        width: 33.33%;
-        background-color: blue;
     }
 
     &__quantity {
@@ -22,5 +21,31 @@
     &__item {
         width: 33.33%;
         background-color: green;
+    }
+}
+
+.select-castle {
+    margin-bottom: 30px;
+    font-family: $main-font;
+    font-size: $sub-element-font;
+}
+
+//Outline must be same as padding, outline must fit
+.castle-images {
+    height: 210px;
+    padding: 2px;
+    overflow: auto;
+
+    .castle-image {
+        display: flex;
+
+        &.selected-castle {
+            outline: 2px solid $hover-color;
+        }
+
+        &:hover {
+            cursor: pointer;
+            outline: 2px solid $hover-color;
+        }
     }
 }

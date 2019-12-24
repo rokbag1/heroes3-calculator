@@ -2,6 +2,12 @@
 
 body {
     background-image: url("../images/heroes-main-background.jpg");
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
 }
 
 .body-title {
@@ -11,3 +17,12 @@ body {
     width: 100%;
     text-align: center;
 }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }

@@ -39,7 +39,7 @@ module.exports = new webpackBuilder.Builder(__dirname, {
         }
     })
     .use(images)
-    .use(webpackDevServer)
+    .use(webpackDevServer, {port:3000, host:"0.0.0.0", historyApiFallback:true})
     .use(htmlPlugin, {
         inject: false,
         appMountId: "root",

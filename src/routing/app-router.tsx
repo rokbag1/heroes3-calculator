@@ -5,6 +5,7 @@ import { PageLoader } from "src/components/page-loader/page-loader";
 import { AppHistory } from "./app-history";
 import { AppRoutesPaths } from "./app-routes-paths";
 
+//React.lazy() -> for load management, don't load until you are not in this template
 const MainDesignRoute = React.lazy(() => import("./routes/main-design-route"));
 const TemplateRoute = React.lazy(() => import("./routes/template-route"));
 
