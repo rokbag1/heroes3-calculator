@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
-export interface Castle {
-    id: number;
-    name: string;
-    keyWord: string;
-    town: string;
-}
+import { Castle } from "../main-design/contracts";
+import { MainContext } from "../main-design/main-context";
 
 const castles: Castle[] = [
     {
@@ -89,7 +85,11 @@ const castles: Castle[] = [
 const SelectCastle = (props: SelectCastleProps): JSX.Element => (
     <div className="castle-images">
         {castles.map(item => (
-            <div className={`castle-image ${item.id === props.castle?.id? "selected-castle" :""}`} key={item.id} onClick={() => props.setCastle(item)}>
+            <div
+                className={`castle-image ${item.id === props.castle?.id ? "selected-castle" : ""}`}
+                key={item.id}
+                onClick={() => props.setCastle(item)}
+            >
                 <img src={`src/images/towns/${item.town}.gif`} alt="image" />
             </div>
         ))}
@@ -102,15 +102,16 @@ interface SelectCastleProps {
 }
 
 export const CreatureDesign: React.FC = () => {
+    //useContext hook to receive all data from MainContext
+    const castleContext = useContext(MainContext);
     // useState hook to save castle. castle => Selected castle, setCastle => function which do stuff for castle
-    const [castle, setCastle] = useState<Castle | null>(null);
 
     // React way foreach elements
     return (
         <div>
             <div className="select-castle">First select town</div>
-            <SelectCastle setCastle={setCastle}  castle={castle}/>
-            {castle != null ? <div>{castle.name}</div> : null}
+            <SelectCastle setCastle={castleContext.setCastle} castle={castleContext.castle} />
+            {castleContext.castle != null ? <div>{castleContext.castle.name}</div> : null}
         </div>
     );
 };
