@@ -16,7 +16,7 @@ const SelectCreature = ({ creature, setCreature, town }: MainContext): JSX.Eleme
                           key={item.id}
                           onClick={() => setCreature(item)}
                       >
-                          <img src={`src/images/creatures/${town?.town}/${town?.keyWord}${++index}.bmp`} alt="image" />
+                          <img src={`src/images/creatures/${town?.town}/${item.image}.bmp`} alt="image" />
                       </div>
                   ))
                 : null}
