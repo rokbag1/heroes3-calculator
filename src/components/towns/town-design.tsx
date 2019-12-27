@@ -33,7 +33,7 @@ export const TownDesign: React.FC = () => {
     return (
         <div>
             <div className="select-castle">First select town</div>
-            <SelectCastle setCastle={castleContext.setCastle} castle={castleContext.castle} />
+            <SelectCastle setCastle={castleContext.setTown} castle={castleContext.town} />
         </div>
     );
 };

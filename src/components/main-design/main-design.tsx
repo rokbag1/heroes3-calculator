@@ -3,24 +3,24 @@ import React, { useState } from "react";
 import { AppHistory } from "@routing/app-history";
 import { AppRoutesPaths } from "@routing/app-routes-paths";
 
-import { Castle, Creature } from "./contracts";
+import { Town, Creature } from "./contracts";
 import { MainContext } from "./main-context";
 import { TownDesign } from "../towns/town-design";
-
-import "./main-design.scss";
 import { CreatureDesign } from "../creatures/creature-design";
 
+import "./main-design.scss";
+
 export const MainDesign: React.FC = () => {
-    const [castle, setCastle] = useState<Castle | null>(null);
+    const [town, setTown] = useState<Town | null>(null);
     const [creature, setCreature] = useState<Creature | null>(null);
-    
+
     return (
         //Main stuff in website
         //Context provides hook data for all children inside wrapped components
         <MainContext.Provider
             value={{
-                castle: castle,
-                setCastle: setCastle,
+                town: town,
+                setTown: setTown,
                 creature: creature,
                 setCreature: setCreature
             }}
