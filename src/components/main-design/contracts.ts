@@ -9,4 +9,5 @@ export interface Creature {
     id: number;
     name: string;
     power: number;
+    image: string;
 }
