@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
+import { Towns } from "src/shared/constants";
 import { MainContext } from "../main-design/main-context";
 import { getCreaturesArray } from "src/shared/helpers/creature-helpers";
-import { Towns } from "src/shared/constants";
 
 const SelectCreature = ({ creature, setCreature, town }: MainContext): JSX.Element => {
     const creatureArray = town?.town != null ? getCreaturesArray(town.town as Towns) : null;
@@ -10,13 +10,13 @@ const SelectCreature = ({ creature, setCreature, town }: MainContext): JSX.Eleme
     return (
         <div className="castle-images">
             {creatureArray != null
-                ? creatureArray.map(item => (
+                ? creatureArray.map((item, index) => (
                       <div
                           className={`castle-image ${item.id === creature?.id ? "selected-castle" : ""}`}
                           key={item.id}
                           onClick={() => setCreature(item)}
                       >
-                          <img src={`src/images/creatures/${town?.town}/${item?.id}.bmp`} alt="image" />
+                          <img src={`src/images/creatures/${town?.town}/${town?.keyWord}${++index}.bmp`} alt="image" />
                       </div>
                   ))
                 : null}

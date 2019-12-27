@@ -9,7 +9,7 @@ export const TOWN: Town[] = [
 
     {
         id: 2,
-        keyWord: "CA",
+        keyWord: "CO",
         town: "conflux"
     },
 

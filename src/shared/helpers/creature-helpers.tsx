@@ -1,13 +1,15 @@
 import { Creature } from "src/components/main-design/contracts";
 
-import { CASTLE_CREATURES } from "../creatures/castle";
 import { Towns } from "../constants";
+
+import { CASTLE_CREATURES } from "../creatures/castle";
+import { CONFLUX_CREATURES } from "../creatures/conflux";
 
 export function getCreaturesArray(town: Towns): Array<Creature> {
     switch (town) {
-        // case Towns.Conflux: {
-        //     return CONFLUX_CREATURES;
-        // }
+        case Towns.Conflux: {
+            return CONFLUX_CREATURES;
+        }
         // case Towns.Cove: {
         //     return COVE_CREATURES;
         // }
