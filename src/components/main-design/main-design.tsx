@@ -1,32 +1,51 @@
-import React from "react";
-
-import { CreatureDesign } from "../creature/creature-design";
+import React, { useState } from "react";
 
 import { AppHistory } from "@routing/app-history";
 import { AppRoutesPaths } from "@routing/app-routes-paths";
+
+import { Castle, Creature } from "./contracts";
+import { MainContext } from "./main-context";
+import { TownDesign } from "../towns/town-design";
+
 import "./main-design.scss";
+import { CreatureDesign } from "../creatures/creature-design";
 
 export const MainDesign: React.FC = () => {
+    const [castle, setCastle] = useState<Castle | null>(null);
+    const [creature, setCreature] = useState<Creature | null>(null);
+    
     return (
         //Main stuff in website
-        <div className="body-class">
-            <div className="body-title">
-                <h4> Heroes of Might and Magic III calculator </h4>
-                <button type="button" onClick={() => AppHistory.push(AppRoutesPaths.mainApp.templateRoute)}>
-                    PUSH NEXT ROUTE
-                </button>
-            </div>
-
-            {/* TODO select one of the blocks and create logic */}
-            <div className="body-block">
-                <div className="body-block__creature">
-                    <CreatureDesign />
+        //Context provides hook data for all children inside wrapped components
+        <MainContext.Provider
+            value={{
+                castle: castle,
+                setCastle: setCastle,
+                creature: creature,
+                setCreature: setCreature
+            }}
+        >
+            <div className="body-class">
+                <div className="body-title">
+                    <h4> Heroes of Might and Magic III calculator </h4>
+                    <button type="button" onClick={() => AppHistory.push(AppRoutesPaths.mainApp.templateRoute)}>
+                        PUSH NEXT ROUTE
+                    </button>
                 </div>
 
-                <div className="body-block__quantity"></div>
+                {/* TODO select one of the blocks and create logic */}
+                <div className="body-block">
+                    <div className="body-block__creature">
+                        <TownDesign />
+                    </div>
 
-                <div className="body-block__item"> {/* Item can also be building */}</div>
+                    <div className="body-block__quantity">
+                        <CreatureDesign />
+                    </div>
+
+                    <div className="body-block__item"> {/* Item can also be building */}</div>
+                </div>
             </div>
-        </div>
+        </MainContext.Provider>
     );
 };
