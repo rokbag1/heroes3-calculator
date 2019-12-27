@@ -11,35 +11,35 @@ export const TOWN: Town[] = [
     {
         id: 2,
         name: "Conflux",
-        keyWord: "CA",
+        keyWord: "CO",
         town: "conflux"
     },
 
     {
         id: 3,
-        name: "Cove",
-        keyWord: "CA",
-        town: "cove"
+        name: "Dungeon",
+        keyWord: "Du",
+        town: "dungeon"
     },
 
     {
         id: 4,
         name: "Fortress",
-        keyWord: "CA",
+        keyWord: "FO",
         town: "fortress"
     },
 
     {
         id: 5,
         name: "Inferno",
-        keyWord: "CA",
+        keyWord: "IN",
         town: "inferno"
     },
 
     {
         id: 6,
         name: "Necropolis",
-        keyWord: "CA",
+        keyWord: "NE",
         town: "necropolis"
     },
     // CAnt find neutral
@@ -53,28 +53,28 @@ export const TOWN: Town[] = [
     {
         id: 8,
         name: "Rampart",
-        keyWord: "CA",
+        keyWord: "RA",
         town: "rampart"
     },
 
     {
         id: 9,
         name: "Stronghold",
-        keyWord: "CA",
+        keyWord: "ST",
         town: "stronghold"
     },
 
     {
         id: 10,
         name: "Tower",
-        keyWord: "CA",
+        keyWord: "TO",
         town: "tower"
     },
 
     {
         id: 11,
         name: "Dungeon",
-        keyWord: "CA",
+        keyWord: "DU",
         town: "dungeon"
     }
 ];
