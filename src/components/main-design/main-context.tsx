@@ -1,16 +1,16 @@
 import { createContext } from "react";
-import { Castle, Creature } from "./contracts";
+import { Town, Creature } from "./contracts";
 
 export interface MainContext {
-    castle: Castle | null;
-    setCastle: React.Dispatch<React.SetStateAction<Castle | null>>;
+    town: Town | null;
+    setTown: React.Dispatch<React.SetStateAction<Town | null>>;
     creature: Creature | null;
     setCreature: React.Dispatch<React.SetStateAction<Creature | null>>;
 }
 
 export const MainContext = createContext<MainContext>({
-    castle: null,
-    setCastle: () => {},
+    town: null,
+    setTown: () => {},
     creature: null,
     setCreature: () => {}
 });
