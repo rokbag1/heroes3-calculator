@@ -3,23 +3,26 @@ import React, { useState } from "react";
 import { AppHistory } from "@routing/app-history";
 import { AppRoutesPaths } from "@routing/app-routes-paths";
 
-import { Castle } from "./contracts";
+import { Castle, Creature } from "./contracts";
 import { MainContext } from "./main-context";
-import { CreatureDesign } from "../creature/creature-design";
+import { TownDesign } from "../towns/town-design";
 
 import "./main-design.scss";
-import { Template } from "../template-component/template-component";
+import { CreatureDesign } from "../creatures/creature-design";
 
 export const MainDesign: React.FC = () => {
     const [castle, setCastle] = useState<Castle | null>(null);
-
+    const [creature, setCreature] = useState<Creature | null>(null);
+    
     return (
         //Main stuff in website
         //Context provides hook data for all children inside wrapped components
         <MainContext.Provider
             value={{
                 castle: castle,
-                setCastle: setCastle
+                setCastle: setCastle,
+                creature: creature,
+                setCreature: setCreature
             }}
         >
             <div className="body-class">
@@ -33,11 +36,11 @@ export const MainDesign: React.FC = () => {
                 {/* TODO select one of the blocks and create logic */}
                 <div className="body-block">
                     <div className="body-block__creature">
-                        <CreatureDesign />
+                        <TownDesign />
                     </div>
 
                     <div className="body-block__quantity">
-                        <Template />
+                        <CreatureDesign />
                     </div>
 
                     <div className="body-block__item"> {/* Item can also be building */}</div>
