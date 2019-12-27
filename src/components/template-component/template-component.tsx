@@ -9,6 +9,6 @@ export const Template: React.FC = () => {
 
     return (
         //Main stuff in website
-        <div className="template">{castleContext.castle?.name}</div>
+        <div className="template">{castleContext.town?.name}</div>
     );
 };

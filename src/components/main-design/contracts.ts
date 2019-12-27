@@ -1,6 +1,5 @@
 export interface Town {
     id: number;
-    name: string;
     keyWord: string;
     town: string;
 }
