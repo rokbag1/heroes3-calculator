@@ -1,6 +1,6 @@
 import { Creature } from "src/components/main-design/contracts";
 
-export const TOSTLE_CREATURES: Creature[] = [
+export const TOWER_CREATURES: Creature[] = [
     {
         id: 1001,
         name: "Gremlin",

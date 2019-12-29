@@ -3,15 +3,24 @@
 .body-block {
     display: flex;
     justify-content: flex-start;
-    background-color: aqua;
     max-height: 400px;
     height: 100%;
     justify-content: flex-start;
     margin-top: 50px;
 
-    &__creature {
-        margin: 30px;
+    &__town, &__creature {
+        background-size: cover;
+        padding: 60px
     }
+
+    &__town {
+        background-image: url('../../images/fan-base/fan-base_Dmitry-Khrapovitsky.jpg');
+    }
+
+    &__creature {
+        background-image: url('../../images/fan-base/fan-base_Dmitry-Khrapovitsky2.jpg');
+    }
+
 
     &__quantity {
         width: 33.33%;
@@ -24,22 +33,27 @@
     }
 }
 
-.select-castle {
+.select-element-name {
+    padding: 0 5px;
     margin-bottom: 30px;
     font-family: $main-font;
     font-size: $sub-element-font;
+    color:  $hover-color;
 }
 
 //Outline must be same as padding, outline must fit
-.castle-images {
+.column-elements {
     height: 210px;
     padding: 2px;
     overflow: auto;
 
-    .castle-image {
+    .column-element {
+        margin: 0 auto;
+        width: fit-content;
         display: flex;
+        justify-content: center;
 
-        &.selected-castle {
+        &.picked-element {
             outline: 2px solid $hover-color;
         }
 
