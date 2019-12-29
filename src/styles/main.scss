@@ -1,9 +1,8 @@
 @import "./variables.scss";
 
 body {
+    background-color: $background-color;
     background-image: url("../images/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 
     ::-webkit-scrollbar {
         display: none;
@@ -19,16 +18,17 @@ body {
     text-align: center;
 
     img {
-        width: 20%;
-        box-shadow: 0 8px 6px -6px black;
+        height: 150px;
     }
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
-  }
+}
 
-  *, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
