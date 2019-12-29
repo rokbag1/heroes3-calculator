@@ -12,7 +12,12 @@ const SelectCastle = (props: SelectCastleProps): JSX.Element => (
                 key={item.id}
                 onClick={() => props.setCastle(item)}
             >
-                <img src={`src/images/towns/${item.town}.gif`} alt="image" />
+                <div className="overflow-element">
+                    <img className="overflow-element-image" src={`src/images/towns/${item.town}.gif`} alt="image" />
+                     <div className="overflow-element-text">
+                        <div className="overflow-element-text-push">{item.town}</div>
+                     </div>
+                </div>
             </div>
         ))}
     </div>
@@ -32,7 +37,7 @@ export const TownDesign: React.FC = () => {
     // React way foreach elements
     return (
         <div>
-            <div className="select-element-name">First select town</div>
+            <div className="select-element-name">Select Town</div>
             <SelectCastle setCastle={castleContext.setTown} castle={castleContext.town} />
         </div>
     );

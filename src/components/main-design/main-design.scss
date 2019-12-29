@@ -4,55 +4,39 @@
     display: flex;
     justify-content: flex-start;
     max-width: 1200px;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 100%;
-    justify-content: flex-start;
     margin-top: 50px;
 
-    &__town, &__creature {
-        background-size: cover;
-        padding: 60px
-    }
-
-    &__town {
-        background-image: url('../../images/fan-base/fan-base_Dmitry-Khrapovitsky.jpg');
-    }
-
-    &__creature {
-        background-image: url('../../images/fan-base/fan-base_Dmitry-Khrapovitsky2.jpg');
-    }
-
-
-    &__quantity {
-        width: 33.33%;
-        background-color: red;
-    }
-
-    &__item {
-        width: 33.33%;
-        background-color: green;
+    &__town, &__creature, &__quantity, &__item, &__week  {
+        border: 1px solid #2E1C0E;
+        width: 350px;
+        height: 250px;
+        background-image: url('../../images/heroes-main-background.jpg');
+        margin: 2rem;
+        padding: 1.2rem;
     }
 }
 
 .select-element-name {
+    font-weight: bold;
+    text-align: center;
     padding: 0 5px;
-    margin-bottom: 30px;
-    font-family: $main-font;
-    font-size: $sub-element-font;
+    margin-bottom: 1rem;
     color:  $hover-color;
 }
 
 //Outline must be same as padding, outline must fit
 .column-elements {
-    height: 210px;
+    display: inline-block;
+    width: 100%;
+    height: 162px;
     padding: 2px;
     overflow: auto;
 
     .column-element {
-        margin: 0 auto;
-        width: fit-content;
-        display: flex;
-        justify-content: center;
+        color: $hover-color;
 
         &.picked-element {
             outline: 2px solid $hover-color;
@@ -61,6 +45,32 @@
         &:hover {
             cursor: pointer;
             outline: 2px solid $hover-color;
+        }
+
+        .overflow-element {
+            display: flex;
+
+            &-image {
+                height: 40px;
+            }
+
+            &-text {
+                line-height: 40px;
+                height: 40px;
+                width: 100%;
+                font-weight: bold;
+                font-size: 14px;
+                border-top: 1px solid $hover-color;
+                border-bottom: 1px solid $hover-color;
+
+                &-push {
+                    margin-left: 15px;
+                }
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
         }
     }
 }

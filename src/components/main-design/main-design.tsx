@@ -42,8 +42,9 @@ export const MainDesign: React.FC = () => {
                     <div className="body-block__creature">
                         <CreatureDesign />
                     </div>
-
-                    <div className="body-block__item"> {/* Item can also be building */}</div>
+                    <div className="body-block__quantity"> {/* Item can also be building */}</div>
+                    <div className="body-block__item"> {/*  */}</div>
+                    <div className="body-block__week"> {/*  */}</div>
                 </div>
             </div>
         </MainContext.Provider>

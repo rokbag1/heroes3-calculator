@@ -4,12 +4,6 @@ body {
     background-image: url("../images/background.png");
     background-size: cover;
     background-repeat: no-repeat;
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    -ms-overflow-style: none;
 }
 
 .body-title {
