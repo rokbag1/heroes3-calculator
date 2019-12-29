@@ -6,7 +6,7 @@ import { TOWN } from "src/shared/towns";
 
 const SelectCastle = (props: SelectCastleProps): JSX.Element => (
     <div className="column-elements">
-        {TOWN.map(item => (
+        {TOWN.map((item, index) => (
             <div
                 className={`column-element ${item.id === props.castle?.id ? "picked-element" : ""}`}
                 key={item.id}
@@ -14,9 +14,9 @@ const SelectCastle = (props: SelectCastleProps): JSX.Element => (
             >
                 <div className="overflow-element">
                     <img className="overflow-element-image" src={`src/images/towns/${item.town}.gif`} alt="image" />
-                     <div className="overflow-element-text">
+                    <div className={`overflow-element-text ${index === 0 ? "first-element" : ""}`}>
                         <div className="overflow-element-text-push">{item.town}</div>
-                     </div>
+                    </div>
                 </div>
             </div>
         ))}

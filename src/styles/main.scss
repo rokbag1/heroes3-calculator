@@ -1,19 +1,24 @@
 @import "./variables.scss";
 
 body {
-    background-color: $background-color;
+    background-color: $brown;
     background-image: url("../images/background.png");
-<<<<<<< HEAD
-    background-size: cover;
-    background-repeat: no-repeat;
-=======
 
     ::-webkit-scrollbar {
-        display: none;
+        width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #3d2815;
+        border: 1px solid #4a311d;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $yellow;
+        border: 1px solid #c4ba6c;
     }
 
     -ms-overflow-style: none;
->>>>>>> c994410b3703cc4ca4977a306d4c4dfdf4e6490f
 }
 
 .body-title {

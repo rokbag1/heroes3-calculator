@@ -27,7 +27,7 @@ export const MainDesign: React.FC = () => {
         >
             <div className="body-class">
                 <div className="body-title">
-                    <img src="src/images/site-title.png" ></img>
+                    <img src="src/images/site-title.png"></img>
                     {/* <button type="button" onClick={() => AppHistory.push(AppRoutesPaths.mainApp.templateRoute)}>
                         PUSH NEXT ROUTE
                     </button> */}
@@ -35,16 +35,16 @@ export const MainDesign: React.FC = () => {
 
                 {/* TODO select one of the blocks and create logic */}
                 <div className="body-block">
-                    <div className="body-block__town">
+                    <div className={`town ${town == null ? "current-step" : ""}`}>
                         <TownDesign />
                     </div>
 
-                    <div className="body-block__creature">
+                    <div className="creature">
                         <CreatureDesign />
                     </div>
-                    <div className="body-block__quantity"> {/* Item can also be building */}</div>
-                    <div className="body-block__item"> {/*  */}</div>
-                    <div className="body-block__week"> {/*  */}</div>
+                    <div className="quantity"> {/* Item can also be building */}</div>
+                    <div className="item"> {/*  */}</div>
+                    <div className="week"> {/*  */}</div>
                 </div>
             </div>
         </MainContext.Provider>
