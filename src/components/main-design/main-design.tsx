@@ -3,16 +3,18 @@ import React, { useState } from "react";
 // import { AppHistory } from "@routing/app-history";
 // import { AppRoutesPaths } from "@routing/app-routes-paths";
 
-import { Town, Creature } from "./contracts";
+import { Town, Creature, Quantity } from "./contracts";
 import { MainContext } from "./main-context";
 import { TownDesign } from "../towns/town-design";
 import { CreatureDesign } from "../creatures/creature-design";
+import { QuantityDesign} from "../quantity/quantity-design";
 
 import "./main-design.scss";
 
 export const MainDesign: React.FC = () => {
     const [town, setTown] = useState<Town | null>(null);
     const [creature, setCreature] = useState<Creature | null>(null);
+    const [quantity, setQuantity] = useState<Quantity | null>(null);
 
     return (
         //Main stuff in website
@@ -22,7 +24,9 @@ export const MainDesign: React.FC = () => {
                 town: town,
                 setTown: setTown,
                 creature: creature,
-                setCreature: setCreature
+                setCreature: setCreature,
+                quantity: quantity,
+                setQuantity: setQuantity
             }}
         >
             <div className="body-class">
@@ -42,7 +46,9 @@ export const MainDesign: React.FC = () => {
                     <div className="creature">
                         <CreatureDesign />
                     </div>
-                    <div className="quantity"> {/* Item can also be building */}</div>
+                    <div className="quantity"> {/* Item can also be building */}
+                        <QuantityDesign />
+                    </div>
                     <div className="item"> {/*  */}</div>
                     <div className="week"> {/*  */}</div>
                 </div>
