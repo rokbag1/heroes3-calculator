@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { AppHistory } from "@routing/app-history";
-import { AppRoutesPaths } from "@routing/app-routes-paths";
+// import { AppHistory } from "@routing/app-history";
+// import { AppRoutesPaths } from "@routing/app-routes-paths";
 
 import { Town, Creature } from "./contracts";
 import { MainContext } from "./main-context";
@@ -27,10 +27,10 @@ export const MainDesign: React.FC = () => {
         >
             <div className="body-class">
                 <div className="body-title">
-                    <h4> Heroes of Might and Magic III calculator </h4>
-                    <button type="button" onClick={() => AppHistory.push(AppRoutesPaths.mainApp.templateRoute)}>
+                    <img src="src/images/site-title.png" ></img>
+                    {/* <button type="button" onClick={() => AppHistory.push(AppRoutesPaths.mainApp.templateRoute)}>
                         PUSH NEXT ROUTE
-                    </button>
+                    </button> */}
                 </div>
 
                 {/* TODO select one of the blocks and create logic */}

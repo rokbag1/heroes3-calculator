@@ -1,7 +1,9 @@
 @import "./variables.scss";
 
 body {
-    background-image: url("../images/heroes-main-background.jpg");
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     ::-webkit-scrollbar {
         display: none;
@@ -13,9 +15,13 @@ body {
 .body-title {
     font-size: $title-font;
     margin-top: 50px;
-
     width: 100%;
     text-align: center;
+
+    img {
+        width: 20%;
+        box-shadow: 0 8px 6px -6px black;
+    }
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
