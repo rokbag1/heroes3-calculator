@@ -1,9 +1,19 @@
 @import "./variables.scss";
 
 body {
+    background-color: $background-color;
     background-image: url("../images/background.png");
+<<<<<<< HEAD
     background-size: cover;
     background-repeat: no-repeat;
+=======
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+>>>>>>> c994410b3703cc4ca4977a306d4c4dfdf4e6490f
 }
 
 .body-title {
@@ -13,16 +23,17 @@ body {
     text-align: center;
 
     img {
-        width: 20%;
-        box-shadow: 0 8px 6px -6px black;
+        height: 150px;
     }
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
-  }
+}
 
-  *, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
