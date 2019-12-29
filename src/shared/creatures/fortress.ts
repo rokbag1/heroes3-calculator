@@ -2,100 +2,100 @@ import { Creature } from "src/components/main-design/contracts";
 
 export const FORTRESS_CREATURES: Creature[] = [
     {
-        id: 301,
-        name: "Troglodyte",
-        power: 59	,
-        image: "DU1"
+        id: 401,
+        name: "Gnoll",
+        power: 56,
+        image: "FO1"
     },
 
     {
-        id: 302,
-        name: "Infernal Troglodyte",
-        power: 84,
-        image: "DU2"
+        id: 402,
+        name: "Gnoll Marauder",
+        power: 90,
+        image: "FO2"
     },
 
     {
-        id: 303,
-        name: "Harpy",
-        power: 154,
-        image: "DU3"
+        id: 403,
+        name: "Lizardman",
+        power: 126,
+        image: "FO3"
     },
 
     {
-        id: 304,
-        name: "Harpy Hag",
-        power: 238,
-        image: "DU4"
+        id: 404,
+        name: "Lizard Warrior",
+        power: 156,
+        image: "FO4"
     },
 
     {
-        id: 305,
-        name: "Beholder",
-        power: 336,
-        image: "DU5"
+        id: 405,
+        name: "Serpent Fly",
+        power: 268,
+        image: "FO5"
     },
 
     {
-        id: 306,
-        name: " Evil Eye",
-        power: 367,
-        image: "DU6"
+        id: 406,
+        name: "Dragon Fly",
+        power: 312,
+        image: "FO6"
     },
 
     {
-        id: 307,
-        name: "Medusa",
-        power: 517,
-        image: "DU7"
+        id: 407,
+        name: "Basilisk",
+        power: 552,
+        image: "FO7"
     },
 
   {
-        id: 308,
-        name: "Medusa Queen	",
-        power: 577,
-        image: "DU8"
+        id: 408,
+        name: "Greater Basilisk",
+        power: 714,
+        image: "FO8"
     },
 
     {
-        id: 309,
-        name: "Minotaur",
-        power: 835,
-        image: "DU9"
+        id: 409,
+        name: "Gorgon",
+        power: 890,
+        image: "FO9"
     },
 
     {
-        id: 310,
-        name: "Minotaur King",
-        power: 1068,
-        image: "DU10"
+        id: 410,
+        name: "Mighty Gorgon",
+        power: 1028,
+        image: "FO10"
     },
 
     {
-        id: 311,
-        name: "Manticore",
-        power: 1547,
-        image: "DU11"
+        id: 411,
+        name: "Wyvern",
+        power: 1350,
+        image: "FO11"
     },
 
     {
-        id: 312,
-        name: "Scorpicore",
-        power: 1589,
-        image: "DU12"
+        id: 412,
+        name: "Wyvern Monarch",
+        power: 1518,
+        image: "FO12"
     },
 
     {
-        id: 313,
-        name: "Red Dragon",
-        power: 4702,
-        image: "DU13"
+        id: 413,
+        name: "Wyvern Monarch",
+        power: 4120,
+        image: "FO13"
     },
 
     {
-        id: 314,
-        name: "Black Dragon",
-        power: 8721,
-        image: "DU14"
+        id: 414,
+        name: "Chaos Hydra",
+        power: 5931,
+        image: "FO14"
     },
 ];

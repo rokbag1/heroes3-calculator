@@ -35,11 +35,11 @@ export const MainDesign: React.FC = () => {
 
                 {/* TODO select one of the blocks and create logic */}
                 <div className="body-block">
-                    <div className="body-block__creature">
+                    <div className="body-block__town">
                         <TownDesign />
                     </div>
 
-                    <div className="body-block__quantity">
+                    <div className="body-block__creature">
                         <CreatureDesign />
                     </div>
 

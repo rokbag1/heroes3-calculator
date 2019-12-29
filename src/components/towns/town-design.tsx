@@ -5,10 +5,10 @@ import { MainContext } from "../main-design/main-context";
 import { TOWN } from "src/shared/towns";
 
 const SelectCastle = (props: SelectCastleProps): JSX.Element => (
-    <div className="castle-images">
+    <div className="column-elements">
         {TOWN.map(item => (
             <div
-                className={`castle-image ${item.id === props.castle?.id ? "selected-castle" : ""}`}
+                className={`column-element ${item.id === props.castle?.id ? "picked-element" : ""}`}
                 key={item.id}
                 onClick={() => props.setCastle(item)}
             >
@@ -32,7 +32,7 @@ export const TownDesign: React.FC = () => {
     // React way foreach elements
     return (
         <div>
-            <div className="select-castle">First select town</div>
+            <div className="select-element-name">First select town</div>
             <SelectCastle setCastle={castleContext.setTown} castle={castleContext.town} />
         </div>
     );

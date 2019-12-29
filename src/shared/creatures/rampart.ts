@@ -1,101 +1,101 @@
 import { Creature } from "src/components/main-design/contracts";
 
-export const FORTRESS_CREATURES: Creature[] = [
+export const RAMPART_CREATURES: Creature[] = [
     {
-        id: 501,
-        name: "Skeleton",
-        power: 60,
-        image: "NE1"
+        id: 701,
+        name: "Centaur",
+        power: 100,
+        image: "RA1"
     },
 
     {
-        id: 502,
-        name: "Skeleton Warrior",
-        power: 85,
-        image: "NE2"
+        id: 702,
+        name: "Centaur Captain",
+        power: 138,
+        image: "RA2"
     },
 
     {
-        id: 503,
-        name: "Walking Dead",
-        power: 98,
-        image: "NE3"
+        id: 703,
+        name: "Dwarf",
+        power: 138,
+        image: "RA3"
     },
 
     {
-        id: 504,
-        name: "Zombie",
-        power: 128,
-        image: "NE4"
+        id: 704,
+        name: "Battle Dwarf",
+        power: 209,
+        image: "RA4"
     },
 
     {
-        id: 505,
-        name: "Wight",
-        power: 252,
-        image: "NE5"
+        id: 705,
+        name: "Wood Elf",
+        power: 234,
+        image: "RA5"
     },
 
     {
-        id: 506,
-        name: "Wraith",
-        power: 315,
-        image: "NE6"
+        id: 706,
+        name: "Grand Elf",
+        power: 331,
+        image: "RA6"
     },
 
     {
-        id: 507,
-        name: "Vampire",
-        power: 555,
-        image: "NE7"
+        id: 707,
+        name: "Pegasus",
+        power: 518,
+        image: "RA7"
     },
 
   {
-        id: 508,
-        name: "Vampire Lord",
-        power: 783,
-        image: "NE8"
+        id: 708,
+        name: "Silver Pegasus",
+        power: 532,
+        image: "RA8"
     },
 
     {
-        id: 509,
-        name: "Lich",
-        power: 848,
-        image: "NE9"
+        id: 709,
+        name: "Dendroid Guard",
+        power: 517,
+        image: "RA9"
     },
 
     {
-        id: 510,
-        name: "Power Lich",
-        power: 1079,
-        image: "NE10"
+        id: 710,
+        name: "Dendroid Soldier",
+        power: 803,
+        image: "RA10"
     },
 
     {
-        id: 511,
-        name: "Black Knight",
-        power: 2087,
-        image: "NE11"
+        id: 711,
+        name: "Unicorn",
+        power: 1806,
+        image: "RA11"
     },
 
     {
-        id: 512,
-        name: "Dread Knight",
-        power: 2382,
-        image: "NE12"
+        id: 712,
+        name: "War Unicorn",
+        power: 2030,
+        image: "RA12"
     },
 
     {
-        id: 513,
-        name: "Bone Dragon",
-        power: 3388,
-        image: "NE13"
+        id: 713,
+        name: "Green Dragon",
+        power: 4872,
+        image: "RA13"
     },
 
     {
-        id: 514,
-        name: "Ghost Dragon",
-        power: 4696,
-        image: "NE14"
+        id: 714,
+        name: "Gold Dragon",
+        power: 8613,
+        image: "RA14"
     },
 ];
