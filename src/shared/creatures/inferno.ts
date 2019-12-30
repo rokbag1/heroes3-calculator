@@ -89,7 +89,7 @@ export const INFERNO_CREATURES: Creature[] = [
         id: 513,
         name: "Devil",
         power: 5101,
-        image: "4120"
+        image: "IN13"
     },
 
     {

@@ -1,51 +1,98 @@
 @import "@styles/variables.scss";
 
-.body-block {
-    display: flex;
-    justify-content: flex-start;
-    background-color: aqua;
-    max-height: 400px;
-    height: 100%;
-    justify-content: flex-start;
-    margin-top: 50px;
-
-    &__creature {
-        margin: 30px;
-    }
-
-    &__quantity {
-        width: 33.33%;
-        background-color: red;
-    }
-
-    &__item {
-        width: 33.33%;
-        background-color: green;
-    }
-}
-
-.select-castle {
-    margin-bottom: 30px;
-    font-family: $main-font;
-    font-size: $sub-element-font;
-}
-
-//Outline must be same as padding, outline must fit
-.castle-images {
-    height: 210px;
-    padding: 2px;
-    overflow: auto;
-
-    .castle-image {
+.body-class {
+    .body-block {
         display: flex;
+        justify-content: center;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 50px;
 
-        &.selected-castle {
-            outline: 2px solid $hover-color;
+        > .town,
+        > .creature,
+        > .quantity,
+        > .item,
+        > .week {
+            border: 1px solid #2e1c0e;
+            width: 350px;
+            height: 250px;
+            background-image: url("../../images/heroes-main-background.jpg");
+            margin: 1rem;
+            padding: 1.2rem;
+            box-shadow: 0 15px 16px rgba(0, 0, 0, 0.5);
+
+            &.current-step {
+                border: 1px solid $yellow;
+            }
         }
+    }
 
-        &:hover {
-            cursor: pointer;
-            outline: 2px solid $hover-color;
+    .calculator-block-title {
+        font-weight: bold;
+        text-align: center;
+        padding: 0 5px;
+        margin-bottom: 1rem;
+        color: $yellow;
+    }
+
+    //Outline must be same as padding, outline must fit
+    .pick-game-item {
+        display: inline-block;
+        width: 100%;
+        height: 10rem;
+        overflow-y: scroll;
+        border: 2px solid $dark-brown;
+
+        .game-item {
+            color: $yellow;
+
+            &.picked-item {
+                // outline: 2px solid $yellow;
+                background: rgba($color: $yellow, $alpha: 0.2);
+
+                &:hover {
+                    cursor: pointer;
+                    background: rgba($color: $yellow, $alpha: 0.3);
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                background: rgba($color: $brown, $alpha: 0.5);
+            }
+
+            .game-item-block {
+                display: flex;
+
+                .image-in-scroll {
+                    height: 40px;
+                }
+
+                .text-box-in-scroll {
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+                    width: 100%;
+                    font-weight: bold;
+                    font-size: 12px;
+                    border-top: 2px solid black;
+                    border-bottom: 1px solid $yellow;
+
+                    &.first-element {
+                        border-top: 2px solid transparent;
+                    }
+
+                    .text-in-scroll {
+                        padding-left: 1rem;
+
+                        &::first-letter {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
         }
     }
 }

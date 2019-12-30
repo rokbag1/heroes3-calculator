@@ -5,14 +5,19 @@ import { MainContext } from "../main-design/main-context";
 import { TOWN } from "src/shared/towns";
 
 const SelectCastle = (props: SelectCastleProps): JSX.Element => (
-    <div className="castle-images">
-        {TOWN.map(item => (
+    <div className="pick-game-item">
+        {TOWN.map((item, index) => (
             <div
-                className={`castle-image ${item.id === props.castle?.id ? "selected-castle" : ""}`}
+                className={`game-item ${item.id === props.castle?.id ? "picked-item" : ""}`}
                 key={item.id}
                 onClick={() => props.setCastle(item)}
             >
-                <img src={`src/images/towns/${item.town}.gif`} alt="image" />
+                <div className="game-item-block">
+                    <img className="image-in-scroll" src={`src/images/towns/${item.town}.gif`} alt="image" />
+                    <div className={`text-box-in-scroll ${index === 0 ? "first-element" : ""}`}>
+                        <div className="text-in-scroll">{item.town}</div>
+                    </div>
+                </div>
             </div>
         ))}
     </div>
@@ -32,7 +37,7 @@ export const TownDesign: React.FC = () => {
     // React way foreach elements
     return (
         <div>
-            <div className="select-castle">First select town</div>
+            <div className="calculator-block-title">Select Town</div>
             <SelectCastle setCastle={castleContext.setTown} castle={castleContext.town} />
         </div>
     );

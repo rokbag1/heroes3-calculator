@@ -10,3 +10,10 @@ export interface Creature {
     power: number;
     image: string;
 }
+
+export interface Quantity {
+    id: number;
+    name: string;
+    quantityMin: number;
+    quantityMax: number;
+}

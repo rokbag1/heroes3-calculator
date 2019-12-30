@@ -8,15 +8,20 @@ const SelectCreature = ({ creature, setCreature, town }: MainContext): JSX.Eleme
     const creatureArray = town?.town != null ? getCreaturesArray(town.town as Towns) : null;
 
     return (
-        <div className="castle-images">
+        <div className="pick-game-item">
             {creatureArray != null
                 ? creatureArray.map((item, index) => (
                       <div
-                          className={`castle-image ${item.id === creature?.id ? "selected-castle" : ""}`}
+                          className={`game-item ${item.id === creature?.id ? "picked-item" : ""}`}
                           key={item.id}
                           onClick={() => setCreature(item)}
                       >
-                          <img src={`src/images/creatures/${town?.town}/${item.image}.bmp`} alt="image" />
+                          <div className="game-item-block">
+                              <img className="image-in-scroll" src={`src/images/creatures/${town?.town}/${item.image}.bmp`} alt="image" />
+                              <div className={`text-box-in-scroll ${index === 0 ? "first-element" : ""}`}>
+                                  <div className="text-in-scroll">{item.name}</div>
+                              </div>
+                          </div>
                       </div>
                   ))
                 : null}
@@ -30,7 +35,7 @@ export const CreatureDesign: React.FC = () => {
     // React way foreach elements
     return (
         <div>
-            <div className="select-castle">Then select creature</div>
+            <div className="calculator-block-title">Select Creature</div>
             {castleContext.town != null ? <SelectCreature {...castleContext} /> : null}
         </div>
     );
