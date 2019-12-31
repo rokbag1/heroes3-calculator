@@ -1,6 +1,6 @@
+import { Artifact } from "src/components/main-design/contracts";
 
-
-export const ARTIFACTS_WEAPON: Weapon[] = [
+export const ARTIFACTS_WEAPON: Artifact[] = [
     {
         id: 2901,
         name: "Centaur's Axe",

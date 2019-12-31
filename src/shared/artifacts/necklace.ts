@@ -1,6 +1,6 @@
+import { Artifact } from "src/components/main-design/contracts";
 
-
-export const ARTIFACTS_NECKLACE: Necklace[] = [
+export const ARTIFACTS_NECKLACE: Artifact[] = [
     {
         id: 2501,
         name: "Celestial Necklace of Bliss",

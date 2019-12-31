@@ -1,6 +1,6 @@
+import { Artifact } from "src/components/main-design/contracts";
 
-
-export const ARTIFACTS_CAPE: Artifacts[] = [
+export const ARTIFACTS_CAPE: Artifact[] = [
     {
         id: 2001,
         name: "Dragon Wing Tabard",

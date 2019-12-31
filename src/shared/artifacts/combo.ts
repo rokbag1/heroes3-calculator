@@ -1,6 +1,6 @@
+import { Artifact } from "src/components/main-design/contracts";
 
-
-export const ARTIFACTS_COMBO: Combo[] = [
+export const ARTIFACTS_COMBO: Artifact[] = [
     {
         id: 2101,
         name: "Angelic Alliance",

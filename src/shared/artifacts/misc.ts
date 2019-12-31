@@ -1,6 +1,6 @@
+import { Artifact } from "src/components/main-design/contracts";
 
-
-export const ARTIFACTS_MISC: Misc[] = [
+export const ARTIFACTS_MISC: Artifact[] = [
     /* Spell scrolls has diffrent values.
     {
         id: 2401,

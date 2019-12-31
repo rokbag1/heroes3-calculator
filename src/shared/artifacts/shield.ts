@@ -1,6 +1,6 @@
+import { Artifact } from "src/components/main-design/contracts";
 
-
-export const ARTIFACTS_SHIELD: Shield[] = [
+export const ARTIFACTS_SHIELD: Artifact[] = [
     {
         id: 2701,
         name: "Shield of the Dwarven Lords",

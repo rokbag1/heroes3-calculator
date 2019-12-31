@@ -17,3 +17,10 @@ export interface Quantity {
     quantityMin: number;
     quantityMax: number;
 }
+
+export interface Artifact {
+    id: number;
+    name: string;
+    power: number;
+    image: string;
+}

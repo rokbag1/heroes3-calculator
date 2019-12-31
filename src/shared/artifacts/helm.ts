@@ -1,6 +1,6 @@
+import { Artifact } from "src/components/main-design/contracts";
 
-
-export const ARTIFACTS_HELM: Helm[] = [
+export const ARTIFACTS_HELM: Artifact[] = [
     {
         id: 2301,
         name: "Helm of the Alabaster Unicorn",
