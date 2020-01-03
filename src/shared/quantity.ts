@@ -42,29 +42,23 @@ export const QUANTITY: Quantity[] = [
         quantityMin: 100,
         quantityMax: 249
     },
-    // CAnt find neutral
-    // {
-    //     id: 7,
-    //     keyWord: "CA",
-    //     town: "neutral"
-    // },
 
     {
-        id: 58,
+        id: 57,
         name: "Swarm",
         quantityMin: 256,
         quantityMax: 499
     },
 
     {
-        id: 59,
+        id: 58,
         name: "Zounds",
         quantityMin: 500,
         quantityMax: 999
     },
 
     {
-        id: 60,
+        id: 59,
         name: "Legion",
         quantityMin: 1000,
         quantityMax: 9999999

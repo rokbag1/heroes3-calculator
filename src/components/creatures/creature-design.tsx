@@ -4,7 +4,7 @@ import { Towns } from "src/shared/constants";
 import { MainContext } from "../main-design/main-context";
 import { getCreaturesArray } from "src/shared/helpers/creature-helpers";
 
-const SelectCreature = ({ creature, setCreature, town }: MainContext): JSX.Element => {
+const SelectCreature = ({ creature, setCreature, town, setQuantity }: MainContext): JSX.Element => {
     const creatureArray = town?.town != null ? getCreaturesArray(town.town as Towns) : null;
 
     return (
@@ -14,7 +14,7 @@ const SelectCreature = ({ creature, setCreature, town }: MainContext): JSX.Eleme
                       <div
                           className={`game-item ${item.id === creature?.id ? "picked-item" : ""}`}
                           key={item.id}
-                          onClick={() => setCreature(item)}
+                          onClick={() => {setQuantity(null), setCreature(item)}}
                       >
                           <div className="game-item-block">
                               <img className="image-in-scroll" src={`src/images/creatures/${town?.town}/${item.image}.bmp`} alt="image" />

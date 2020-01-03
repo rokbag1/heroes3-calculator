@@ -8,6 +8,7 @@ import { MainContext } from "./main-context";
 import { TownDesign } from "../towns/town-design";
 import { CreatureDesign } from "../creatures/creature-design";
 import { QuantityDesign} from "../quantity/quantity-design";
+import { ItemDesign} from "../items/items-design";
 
 import "./main-design.scss";
 
@@ -49,7 +50,9 @@ export const MainDesign: React.FC = () => {
                     <div className="quantity"> {/* Item can also be building */}
                         <QuantityDesign />
                     </div>
-                    <div className="item"> {/*  */}</div>
+                    <div className="item"> 
+                        <ItemDesign />
+                    </div>
                     <div className="week"> {/*  */}</div>
                 </div>
             </div>

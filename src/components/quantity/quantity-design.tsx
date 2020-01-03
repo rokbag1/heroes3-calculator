@@ -31,7 +31,7 @@ export const QuantityDesign: React.FC = () => {
     // React way foreach elements
     return (
         <div>
-            <div className="calculator-block-title">Select Creature</div>
+            <div className="calculator-block-title">Select Quantity</div>
             {castleContext.town != null && castleContext.creature != null ? <SelectQuantity{...castleContext}  /> : null}
         </div>
     );
