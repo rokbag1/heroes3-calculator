@@ -18,9 +18,13 @@ export interface Quantity {
     quantityMax: number;
 }
 
-export interface Artifact {
+export interface Item {
     id: number;
     name: string;
     power: number;
     image: string;
+}
+
+export interface ItemSelector {
+    folder: string;
 }
