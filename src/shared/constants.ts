@@ -142,34 +142,34 @@ export const SWITCH_BUILDING: ItemSwitch[] = [
     }
 ];
 
-export const ArtifactBuildingSelector: ItemSwitch[] = [
+export const ART_BUI_SELECTOR: ItemSwitch[] = [
     {
         id: 181,
         name: "Artifacts",
-        image: "MIS2.bmp"
+        image: "artifacts/misc/MIS2.bmp"
     },
 
     {
         id: 182,
         name: "Buildings",
-        image: "banks/BAN1.gif"
+        image: "buildings/banks/BAN1.gif"
     },
 
     {
         id: 183,
         name: "Dwellings",
-        image: "castle/CADWE5.gif"
+        image: "buildings/dwellings/castle/CADWE5.gif"
     },
 
     {
         id: 184,
-        name: "Other Objects",
-        image: "OB2.gif"
+        name: "Objects",
+        image: "buildings/objects/OB2.gif"
     },
 
     {
         id: 185,
         name: "Resources",
-        image: "RE1.gif"
+        image: "resources/RE1.gif"
     },
 ];

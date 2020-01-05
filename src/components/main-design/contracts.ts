@@ -25,10 +25,6 @@ export interface Item {
     image: string;
 }
 
-export interface ItemSelector {
-    folder: string;
-}
-
 export interface ItemSwitch {
     id: number;
     name: string;
