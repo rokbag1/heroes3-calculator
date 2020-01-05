@@ -9,6 +9,9 @@ import { Selectors } from "src/shared/constants";
 const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Element => (
     <div className="artifact-building-container">
         <div className="type">
+            {
+                
+            }
             <div className="artifact_building-selector" onClick={()=>props.setSelector(Selectors.Artifact) }>
                 <img src="src/images/artifacts/misc/MIS2.bmp" />
                 <div>Artifact</div>
@@ -16,6 +19,18 @@ const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Ele
             <div className="artifact_building-selector" onClick={()=>props.setSelector(Selectors.Building) }>
                 <img src="src/images/buildings/banks/BAN11.gif" />
                 <div>Building</div>
+            </div>
+            <div className="artifact_building-selector" onClick={()=>props.setSelector(Selectors.Building) }>
+                <img src="src/images/buildings/banks/BAN11.gif" />
+                <div>Dwelings</div>
+            </div>
+            <div className="artifact_building-selector" onClick={()=>props.setSelector(Selectors.Building) }>
+                <img src="src/images/buildings/banks/BAN11.gif" />
+                <div>Other Objects</div>
+            </div>
+            <div className="artifact_building-selector" onClick={()=>props.setSelector(Selectors.Building) }>
+                <img src="src/images/buildings/banks/BAN11.gif" />
+                <div>Other Objects</div>
             </div>
         </div>
     </div>

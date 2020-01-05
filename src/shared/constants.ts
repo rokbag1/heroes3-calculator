@@ -141,3 +141,35 @@ export const SWITCH_BUILDING: ItemSwitch[] = [
         image: "WEAPO1.bmp"
     }
 ];
+
+export const ArtifactBuildingSelector: ItemSwitch[] = [
+    {
+        id: 181,
+        name: "Artifacts",
+        image: "MIS2.bmp"
+    },
+
+    {
+        id: 182,
+        name: "Buildings",
+        image: "banks/BAN1.gif"
+    },
+
+    {
+        id: 183,
+        name: "Dwellings",
+        image: "castle/CADWE5.gif"
+    },
+
+    {
+        id: 184,
+        name: "Other Objects",
+        image: "OB2.gif"
+    },
+
+    {
+        id: 185,
+        name: "Resources",
+        image: "RE1.gif"
+    },
+];
