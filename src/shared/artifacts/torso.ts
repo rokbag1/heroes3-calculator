@@ -1,6 +1,6 @@
-import { Artifact } from "src/components/main-design/contracts";
+import { Item } from "src/components/main-design/contracts";
 
-export const ARTIFACTS_TORSO: Artifact[] = [
+export const ARTIFACTS_TORSO: Item[] = [
     {
         id: 2801,
         name: "Breastplate of Petrified Wood",

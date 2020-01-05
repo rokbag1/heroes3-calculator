@@ -1,6 +1,6 @@
-import { Artifact } from "src/components/main-design/contracts";
+import { Item } from "src/components/main-design/contracts";
 
-export const ARTIFACTS_NECKLACE: Artifact[] = [
+export const ARTIFACTS_NECKLACE: Item[] = [
     {
         id: 2501,
         name: "Celestial Necklace of Bliss",
@@ -90,8 +90,7 @@ export const ARTIFACTS_NECKLACE: Artifact[] = [
         name: "Pendant of Free Will",
         power: 2000,
         image: "NECKLAC13"
-    },
-    
+    },    
 
     {
         id: 2514,
@@ -100,7 +99,6 @@ export const ARTIFACTS_NECKLACE: Artifact[] = [
         image: "NECKLAC14"
     },
     
-
     {
         id: 2515,
         name: "Pendant of Total Recall",
@@ -122,7 +120,6 @@ export const ARTIFACTS_NECKLACE: Artifact[] = [
         image: "NECKLAC17"
     },
     
-
     {
         id: 2518,
         name: "Amulet of the Undertaker",

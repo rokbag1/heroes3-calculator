@@ -1,6 +1,6 @@
-import { Artifact } from "src/components/main-design/contracts";
+import { Item } from "src/components/main-design/contracts";
 
-export const ARTIFACTS_FEET: Artifact[] = [
+export const ARTIFACTS_FEET: Item[] = [
     {
         id: 2201,
         name: "Sandals of the Saint",

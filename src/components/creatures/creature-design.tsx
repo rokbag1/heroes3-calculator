@@ -14,7 +14,7 @@ const SelectCreature = ({ creature, setCreature, town, setQuantity }: MainContex
                       <div
                           className={`game-item ${item.id === creature?.id ? "picked-item" : ""}`}
                           key={item.id}
-                          onClick={() => {setQuantity(null), setCreature(item)}}
+                          onClick={() => {setQuantity(null), setCreature(item);}}
                       >
                           <div className="game-item-block">
                               <img className="image-in-scroll" src={`src/images/creatures/${town?.town}/${item.image}.bmp`} alt="image" />

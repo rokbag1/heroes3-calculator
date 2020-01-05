@@ -28,3 +28,9 @@ export interface Item {
 export interface ItemSelector {
     folder: string;
 }
+
+export interface ItemSwitch {
+    id: number;
+    name: string;
+    image: string;
+}

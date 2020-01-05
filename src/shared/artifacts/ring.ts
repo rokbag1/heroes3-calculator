@@ -1,6 +1,6 @@
-import { Artifact } from "src/components/main-design/contracts";
+import { Item } from "src/components/main-design/contracts";
 
-export const ARTIFACTS_RING: Artifact[] = [
+export const ARTIFACTS_RING: Item[] = [
     {
         id: 2601,
         name: "Quiet Eye of the Dragon",

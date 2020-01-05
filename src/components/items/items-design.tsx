@@ -7,14 +7,14 @@ import { Selectors } from "src/shared/constants";
 // import { getCreaturesArray } from "src/shared/helpers/creature-helpers";
 
 const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Element => (
-    <div className="add-item-container">
+    <div className="artifact-building-container">
         <div className="type">
-            <div className="artifact" onClick={()=>props.setSelector(Selectors.Artifact) }>
+            <div className="artifact_building-selector" onClick={()=>props.setSelector(Selectors.Artifact) }>
                 <img src="src/images/artifacts/misc/MIS2.bmp" />
                 <div>Artifact</div>
             </div>
-            <div className="building" onClick={()=>props.setSelector(Selectors.Building) }>
-                <img src="src/images/buildings/banks/Imp_Cache.gif" />
+            <div className="artifact_building-selector" onClick={()=>props.setSelector(Selectors.Building) }>
+                <img src="src/images/buildings/banks/BAN11.gif" />
                 <div>Building</div>
             </div>
         </div>
@@ -25,13 +25,10 @@ const selectedItemTypeSwitch = (selector: Selectors | null): JSX.Element | null 
     if (selector == null) {
         return null;
     }
-    if (selector === Selectors.Artifact) {
-        return <div>Hello</div>;
-    }
-    if (selector === Selectors.Building) {
-        return <div>Building</div>;
-    }
-    return null;
+    
+    return (
+        <div></div>
+    );
 };
 
 //Example of props
@@ -49,8 +46,10 @@ export const ItemDesign: React.FC = () => {
     return (
         <div>
             <div className="calculator-block-title">Add Item</div>
-            {castleContext.town != null ? <SelectArtifactOrBuilding selector={selector} setSelector={setSelector} /> : null}
-            {selectedItemTypeSwitch(selector)}
+            <div className="pick-item-flex">
+                {castleContext.town != null ? <SelectArtifactOrBuilding selector={selector} setSelector={setSelector} /> : null}
+                {selectedItemTypeSwitch(selector)}
+            </div>
         </div>
     );
 };
