@@ -2,8 +2,10 @@ import React, { useContext, useState } from "react";
 
 // import { Towns } from "src/shared/constants";
 import { MainContext } from "../main-design/main-context";
-import { ART_BUI_SELECTOR } from "src/shared/constants";
+import { ART_BUI_SELECTOR } from "src/shared/selectors";
 import { ItemSwitch } from "../main-design/contracts";
+import { getSwitchArray } from "../../shared/helpers/item-switch-helpers";
+import { Selectors } from "src/shared/constants";
 
 // import { getCreaturesArray } from "src/shared/helpers/creature-helpers";
 
@@ -11,7 +13,11 @@ const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Ele
     <div className="artifact-building-container">
         <div className="type">
             {ART_BUI_SELECTOR.map(item => (
-                <div className={`artifact_building-selector`} key={item.id} onClick={() => props.setSelector(item)}>
+                <div
+                    className={`artifact_building-selector ${item.id === props.selector?.id ? "picked-item" : ""}`}
+                    key={item.id}
+                    onClick={() => props.setSelector(item)}
+                >
                     <img src={`src/images/${item.image}`} />
                     <div>{item.name}</div>
                 </div>
@@ -20,12 +26,28 @@ const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Ele
     </div>
 );
 
-const selectedItemTypeSwitch = (selector: ItemSwitch | null): JSX.Element | null => {
+const selectedItemTypeSwitch = ( {selector, setSelector}: SelectArtifactOrBuildingProps ): JSX.Element | null => {
     if (selector == null) {
         return null;
     }
 
-    return <div></div>;
+    const selectorArray = selector?.id != null ? getSwitchArray(selector.name as Selectors) : null;
+
+    return (
+        <div className="artifact-building-container second-item-selector">
+            <div className="type">
+                {selectorArray != null
+                    ? selectorArray.map(item => (
+                          <div className={`artifact_building-selector ${item.id === selector.id ? "picked-item" : ""}`} key={item.id} onClick={() => setSelector(item)}
+                          >
+                              <img src={`src/images/${item.image}`} />
+                              <div>{item.name}</div>
+                          </div>
+                      ))
+                    : null}
+            </div>
+        </div>
+    );
 };
 
 //Example of props
@@ -42,10 +64,10 @@ export const ItemDesign: React.FC = () => {
     // React way foreach elements
     return (
         <div>
-            <div className="calculator-block-title">Add Item</div>
+            <div className="calculator-block-title add-item">Add Item</div>
             <div className="pick-item-flex">
                 {castleContext.town != null ? <SelectArtifactOrBuilding selector={selector} setSelector={setSelector} /> : null}
-                {selectedItemTypeSwitch(selector)}
+                {selectedItemTypeSwitch({selector:selector, setSelector:setSelector})}
             </div>
         </div>
     );

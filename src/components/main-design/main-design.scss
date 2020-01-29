@@ -49,6 +49,11 @@
         color: $yellow;
     }
 
+    .add-item {
+        margin-bottom: 0;
+        border-bottom: 1px solid $yellow;
+    }
+
     //Outline must be same as padding, outline must fit
     .pick-game-item {
         display: inline-block;
@@ -109,21 +114,30 @@
     }
 
     .pick-item-flex {
+        height: 214px;
         display: flex;
-        height: 190px;
+        justify-content: flex-start;
 
         .artifact-building-container {
-            overflow-y: scroll;
-            height: 190px;
+            overflow-y: auto;
+            border-right: 1px solid $yellow;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
             margin-left: 1px;
-            border-top: 2px solid $dark-brown;
-            border-bottom: 2px solid $dark-brown;
 
             .type {
                 padding: 0.5rem;
                 height: 100%;
-                border-right: 2px solid $dark-brown;
                 width: 10rem;
+
+                &:first-child {
+                    padding: 0 0.5rem 0.5rem 0.5rem;
+                }
+
+                .second-item-selector {
+                    height: 380px;
+                    overflow-y: scroll;
+                }
     
                .artifact_building-selector {
                     color: $yellow;
@@ -142,10 +156,29 @@
     
                     div {
                         padding-left: 1rem;
+
+                        &::first-letter {
+                            text-transform: uppercase;
+                        }
                     }
 
                     &:last-child {
                         margin: 0;
+                    }
+
+                    &.picked-item {
+                        // outline: 2px solid $yellow;
+                        background: rgba($color: $yellow, $alpha: 0.2);
+        
+                        &:hover {
+                            cursor: pointer;
+                            background: rgba($color: $yellow, $alpha: 0.3);
+                        }
+                    }
+        
+                    &:hover {
+                        cursor: pointer;
+                        background: rgba($color: $brown, $alpha: 0.5);
                     }
     
                 }
