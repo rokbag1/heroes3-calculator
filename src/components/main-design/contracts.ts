@@ -17,3 +17,16 @@ export interface Quantity {
     quantityMin: number;
     quantityMax: number;
 }
+
+export interface Item {
+    id: number;
+    name: string;
+    power: number;
+    image: string;
+}
+
+export interface ItemSwitch {
+    id: number;
+    name: string;
+    image: string;
+}

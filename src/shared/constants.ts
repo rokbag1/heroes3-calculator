@@ -10,3 +10,9 @@ export enum Towns {
     Stronghold = "stronghold",
     Tower = "tower"
 }
+
+export enum Selectors {
+    Items = "Items",
+    Buildings = "Buildings",
+    Dwellings = "Dwellings",
+}
