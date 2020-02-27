@@ -4,8 +4,8 @@ import React, { useContext, useState } from "react";
 import { MainContext } from "../main-design/main-context";
 import { ART_BUI_SELECTOR } from "src/shared/selectors";
 import { ItemSwitch } from "../main-design/contracts";
-import { getSwitchArray } from "../../shared/helpers/item-switch-helpers";
-import { Selectors } from "src/shared/constants";
+import { getSwitchArray, getLastItem } from "../../shared/helpers/item-switch-helpers";
+import { Selectors, LastSelectorDwellings, LastSelectorItems } from "src/shared/constants";
 
 // import { getCreaturesArray } from "src/shared/helpers/creature-helpers";
 
@@ -50,6 +50,31 @@ const selectedItemTypeSwitch = ( {selector, setSelector}: SelectArtifactOrBuildi
     );
 };
 
+const realItemSelector = ( {selector, setSelector}: SelectArtifactOrBuildingProps ): JSX.Element | null => {
+    if (selector == null) {
+        return null;
+    }
+
+    const selectorArray = selector?.id != null ? getLastItem(selector.name as LastSelectorItems) : null;
+
+    return (
+        <div className="artifact-building-container second-item-selector">
+            <div className="type">
+                {selectorArray != null
+                    ? selectorArray.map(item => (
+                          <div className={`artifact_building-selector ${item.id === selector.id ? "picked-item" : ""}`} key={item.id} onClick={() => setSelector(item)}
+                          >
+                              <img src={`src/images/${item.image}`} />
+                              <div>{item.name}</div>
+                          </div>
+                      ))
+                    : null}
+            </div>
+        </div>
+    );
+};
+
+
 //Example of props
 interface SelectArtifactOrBuildingProps {
     setSelector: React.Dispatch<React.SetStateAction<ItemSwitch | null>>;
@@ -68,6 +93,7 @@ export const ItemDesign: React.FC = () => {
             <div className="pick-item-flex">
                 {castleContext.town != null ? <SelectArtifactOrBuilding selector={selector} setSelector={setSelector} /> : null}
                 {selectedItemTypeSwitch({selector:selector, setSelector:setSelector})}
+                {realItemSelector({selector:selector, setSelector:setSelector})}
             </div>
         </div>
     );
