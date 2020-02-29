@@ -1,6 +1,6 @@
 import { ItemSwitch } from "../../components/main-design/contracts";
 import { Selectors, LastSelectorBuildings, LastSelectorDwellings, LastSelectorItems } from "../constants";
-import { SWITCH_ITEMS, SWITCH_BUILDINGS, SWITCH_DWELLING, SELECT_CAPE, SELECT_COMBO, SELECT_FEET, SELECT_HELM, SELECT_MISC, SELECT_NECKLACE, SELECT_RING, SELECT_SHIELD, SELECT_TORSO, SELECT_WEAPON, SELECT_RESOURCE, SELECT_BANKS, SELECT_MINES, SELECT_OBJECT } from "../selectors";
+import { SWITCH_ITEMS, SWITCH_BUILDINGS, SWITCH_DWELLING, SELECT_CAPE, SELECT_COMBO, SELECT_FEET, SELECT_HELM, SELECT_MISC, SELECT_NECKLACE, SELECT_RING, SELECT_SHIELD, SELECT_TORSO, SELECT_WEAPON, SELECT_RESOURCE, SELECT_BANKS, SELECT_MINES, SELECT_OBJECT } from "../data/selectors";
 
 export function getSwitchArray(item: Selectors): Array<ItemSwitch> {
     switch (item) {
