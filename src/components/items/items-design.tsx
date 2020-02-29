@@ -5,10 +5,12 @@ import { MainContext } from "../main-design/main-context";
 import { ART_BUI_SELECTOR } from "src/shared/selectors";
 import { ItemSwitch } from "../main-design/contracts";
 import { getSwitchArray, getLastItem } from "../../shared/helpers/item-switch-helpers";
-import { Selectors, LastSelectorDwellings, LastSelectorItems } from "src/shared/constants";
+import { Selectors, LastSelectorDwellings, LastSelectorItems, LastSelectorBuildings } from "src/shared/constants";
 
 // import { getCreaturesArray } from "src/shared/helpers/creature-helpers";
 
+
+//First selector if element is artifact building or dwelling
 const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Element => (
     <div className="artifact-building-container">
         <div className="type">
@@ -26,6 +28,7 @@ const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Ele
     </div>
 );
 
+//Second selector if 
 const selectedItemTypeSwitch = ( {selector, setSelector}: SelectArtifactOrBuildingProps ): JSX.Element | null => {
     if (selector == null) {
         return null;

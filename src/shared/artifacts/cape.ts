@@ -1,4 +1,4 @@
-import { Item } from "src/components/main-design/contracts";
+import { Item } from "../../components/main-design/contracts";
 
 export const ARTIFACTS_CAPE: Item[] = [
     {
