@@ -19,35 +19,35 @@ export enum Selectors {
 
 
 export enum LastSelectorItems {
-    Cape = "Capes",
-    Combo = "Combos",
-    Feet = "Feets",
-    Helm = "Helms",
-    Misc = "Miscs",
-    Necklace = "Necklaces",
-    Ring = "Rings",
-    Shield = "Shields",
-    Torso = "Torsoes",
-    Weapon = "Weapons",
-    Recourse = "Recourses"
+    Cape = "capes",
+    Combo = "combos",
+    Feet = "feet",
+    Helm = "helms",
+    Misc = "mics",
+    Necklace = "necklaces",
+    Ring = "rings",
+    Shield = "shields",
+    Torso = "torsoes",
+    Weapon = "weapons",
+    Recourse = "resources"
 }
 
 export enum LastSelectorBuildings {
-    Banks = "Banks",
-    Mines = "Mines",
-    Objects = "Objects",
+    Banks = "banks",
+    Mines = "mines",
+    Objects = "objects",
 
 }
 
 export enum LastSelectorDwellings {
-    Castle = "Castle",
+    Castle = "castle",
     Conflux = "conflux",
     Cove = "cove",
-    Dungeon = "Dungeon",
-    Fortress = "Fortress",
-    Inferno = "Inferno",
-    Necropolis = "Necropolis",
-    Rampart = "Rampart",
-    Stronghold = "Stronghold",
-    Tower = "Tower"
+    Dungeon = "dungeon",
+    Fortress = "fortress",
+    Inferno = "inferno",
+    Necropolis = "necropolis",
+    Rampart = "rampart",
+    Stronghold = "stronghold",
+    Tower = "tower"
 }

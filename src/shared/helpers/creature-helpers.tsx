@@ -2,16 +2,16 @@ import { Creature } from "src/components/main-design/contracts";
 
 import { Towns } from "../constants";
 
-import { CASTLE_CREATURES } from "../creatures/castle";
-import { CONFLUX_CREATURES } from "../creatures/conflux";
-import { COVE_CREATURES } from "../creatures/cove";
-import { DUNGEON_CREATURES } from "../creatures/dungeon";
-import { FORTRESS_CREATURES } from "../creatures/fortress";
-import { INFERNO_CREATURES } from "../creatures/inferno";
-import { NECROPOLIS_CREATURES } from "../creatures/necropolis";
-import { RAMPART_CREATURES } from "../creatures/rampart";
-import { STRONGHOLD_CREATURES } from "../creatures/stronghold";
-import { TOWER_CREATURES } from "../creatures/tower";
+import { CASTLE_CREATURES } from "../data/creatures/castle";
+import { CONFLUX_CREATURES } from "../data/creatures/conflux";
+import { COVE_CREATURES } from "../data/creatures/cove";
+import { DUNGEON_CREATURES } from "../data/creatures/dungeon";
+import { FORTRESS_CREATURES } from "../data/creatures/fortress";
+import { INFERNO_CREATURES } from "../data/creatures/inferno";
+import { NECROPOLIS_CREATURES } from "../data/creatures/necropolis";
+import { RAMPART_CREATURES } from "../data/creatures/rampart";
+import { STRONGHOLD_CREATURES } from "../data/creatures/stronghold";
+import { TOWER_CREATURES } from "../data/creatures/tower";
 
 export function getCreaturesArray(town: Towns): Array<Creature> {
     switch (town) {
