@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { Town } from "../main-design/contracts";
 import { MainContext } from "../main-design/main-context";
-import { TOWN } from "src/shared/towns";
+import { TOWN } from "src/shared/data/towns";
 
 const SelectCastle = (props: SelectCastleProps): JSX.Element => (
     <div className="pick-game-item">

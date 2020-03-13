@@ -30,3 +30,15 @@ export interface ItemSwitch {
     name: string;
     image: string;
 }
+
+export interface SecondItemSwitch {
+    id: number;
+    name: string;
+    image: string;
+}
+
+export interface LastItemSwitch {
+    id: number;
+    name: string;
+    image: string;
+}

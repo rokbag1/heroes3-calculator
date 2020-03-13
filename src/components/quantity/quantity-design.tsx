@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { MainContext } from "../main-design/main-context";
-import { QUANTITY } from "src/shared/quantity";
+import { QUANTITY } from "src/shared/data/quantity";
 
 const SelectQuantity = ({ quantity, setQuantity }: MainContext): JSX.Element => {
 
