@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import { AppHistory } from "@routing/app-history";
 // import { AppRoutesPaths } from "@routing/app-routes-paths";
 
-import { Town, Creature, Quantity, Item } from "./contracts";
+import { Town, Creature, Quantity, Item, ItemSwitch } from "./contracts";
 import { MainContext } from "./main-context";
 import { TownDesign } from "../towns/town-design";
 import { CreatureDesign } from "../creatures/creature-design";
@@ -16,7 +16,11 @@ export const MainDesign: React.FC = () => {
     const [town, setTown] = useState<Town | null>(null);
     const [creature, setCreature] = useState<Creature | null>(null);
     const [quantity, setQuantity] = useState<Quantity | null>(null);
-    const [item, setItem] = useState<Item | null>(null);
+    const [items, setItems] = useState<ItemSwitch[]>([]);
+
+    const pushToItems = (lastSelectedItem: ItemSwitch): void => {
+        setItems(items.concat(lastSelectedItem));
+    };
 
     return (
         //Main stuff in website
@@ -29,8 +33,8 @@ export const MainDesign: React.FC = () => {
                 setCreature: setCreature,
                 quantity: quantity,
                 setQuantity: setQuantity,
-                item: item,
-                setItem: setItem
+                items: items,
+                setItems: pushToItems
             }}
         >
             <div className="body-class">

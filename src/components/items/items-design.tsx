@@ -11,7 +11,6 @@ import { Selectors, LastSelectorDwellings, LastSelectorItems, LastSelectorBuildi
 
 //First selector if element is artifact building or dwelling
 const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Element => {
-
     return (
         <div className="artifact-building-container">
             <div className="type">
@@ -56,6 +55,8 @@ const SecondSelector = (props: SecondSelectorProp): JSX.Element => {
 
 //Third selector if
 const LastSelector = (props: LastSelectorProp): JSX.Element => {
+    const context = useContext(MainContext);
+
     let selectorArray = null;
 
     switch (props.selector?.name) {
@@ -81,7 +82,10 @@ const LastSelector = (props: LastSelectorProp): JSX.Element => {
                           <div
                               className={`artifact_building-selector ${item.id === props.lastSelector?.id ? "picked-item" : ""}`}
                               key={item.id}
-                              onClick={() => props.lastSetSelector(item)}
+                              onClick={() => {
+                                  props.lastSetSelector(item);
+                                  context.setItems(item);
+                              }}
                           >
                               <img src={`src/images/${item.image}`} />
                               <div>{item.name}</div>
@@ -93,12 +97,15 @@ const LastSelector = (props: LastSelectorProp): JSX.Element => {
     );
 };
 
-const FormattedItem = ({ item, setItem }: MainContext, ): JSX.Element => {
+const FormattedItem = (): JSX.Element => {
+    const context = useContext(MainContext);
 
     return (
-        <div className="pick-game-item">
-            }
-    </div>
+        <div className="">
+            {context.items.map(item => {
+                return <img key={item.id} src={`src/images/${item.image}`} alt="" />;
+            })}
+        </div>
     );
 };
 
@@ -138,7 +145,7 @@ export const ItemDesign: React.FC = () => {
                 {castleContext.town != null && selector?.name != null ? (
                     <SecondSelector secSelector={secSelector} secSetSelector={secSetSelector} selector={selector} />
                 ) : null}
-                {secSelector?.name != null  ? (
+                {secSelector?.name != null ? (
                     <LastSelector
                         selector={selector}
                         lastSelector={lastSelector}
@@ -148,7 +155,7 @@ export const ItemDesign: React.FC = () => {
                     />
                 ) : null}
 
-                {lastSelector?.name != null ? <FormattedItem{...castleContext}  /> : null}
+                <FormattedItem />
             </div>
         </div>
     );
