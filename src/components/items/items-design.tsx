@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 // import { Towns } from "src/shared/constants";
 import { MainContext } from "../main-design/main-context";
@@ -146,14 +146,16 @@ export const ItemDesign: React.FC = () => {
     const [secSelector, secSetSelector] = useState<SecondItemSwitch | null>(null);
     const [lastSelector, lastSetSelector] = useState<LastItemSwitch | null>(null);
 
+    useEffect(() => {
+        secSetSelector(null);
+    }, [selector]);
+
     // React way foreach elements
     return (
         <div>
             <div className="calculator-block-title add-item">Add Item</div>
             <div className="pick-item-flex">
-                {castleContext.town != null && castleContext.creature != null && castleContext.quantity != null ? (
-                    <SelectArtifactOrBuilding selector={selector} setSelector={setSelector} />
-                ) : null}
+                <SelectArtifactOrBuilding selector={selector} setSelector={setSelector} />
                 {castleContext.town != null && selector?.name != null ? (
                     <SecondSelector secSelector={secSelector} secSetSelector={secSetSelector} selector={selector} />
                 ) : null}

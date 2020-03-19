@@ -23,7 +23,8 @@ export const MainDesign: React.FC = () => {
     };
 
     const removeItem = (itemToRemove: ItemSwitch): void => {
-        setItems(items.filter(item => item.id !== itemToRemove.id));
+        const filteredArray = items.filter(x => x.id !== itemToRemove.id);
+        setItems(filteredArray);
     };
 
     return (
