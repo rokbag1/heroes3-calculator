@@ -1,6 +1,6 @@
 import { ItemSwitch } from "../../components/main-design/contracts";
 import { Selectors, LastSelectorBuildings, LastSelectorDwellings, LastSelectorItems } from "../constants";
-import { SWITCH_ITEMS, SWITCH_BUILDINGS, SWITCH_DWELLING, SELECT_CAPE, SELECT_COMBO, SELECT_FEET, SELECT_HELM, SELECT_MISC, SELECT_NECKLACE, SELECT_RING, SELECT_SHIELD, SELECT_TORSO, SELECT_WEAPON, SELECT_RESOURCE, SELECT_BANKS, SELECT_MINES, SELECT_OBJECT } from "../data/pick-item";
+import { SWITCH_ITEMS, SWITCH_BUILDINGS, SWITCH_DWELLING, SELECT_CAPE, SELECT_COMBO, SELECT_FEET, SELECT_HELM, SELECT_MISC, SELECT_NECKLACE, SELECT_RING, SELECT_SHIELD, SELECT_TORSO, SELECT_WEAPON, SELECT_RESOURCE, SELECT_BANKS, SELECT_MINES, SELECT_OBJECT, SELECT_DWE_CASTLE, SELECT_DWE_CONFLUX, SELECT_DWE_DUNGEON, SELECT_DWE_FORTRESS, SELECT_DWE_INFERNO, SELECT_DWE_NECROPOLIS, SELECT_DWE_RAMPART, SELECT_DWE_STRONGHOLD, SELECT_DWE_TOWER, SELECT_DWE_SWAMP } from "../data/pick-item";
 
 export function getSwitchArray(item: Selectors): Array<ItemSwitch> {
     console.log (item );
@@ -84,38 +84,38 @@ export function getLastBuilding(item: LastSelectorBuildings): Array<ItemSwitch> 
 export function getLastDwelling(item: LastSelectorDwellings): Array<ItemSwitch> {
     switch (item) {
         case LastSelectorDwellings.Castle: {
-            return SELECT_BANKS;
+            return SELECT_DWE_CASTLE;
         }
         case LastSelectorDwellings.Conflux: {
-            return SELECT_MINES;
+            return SELECT_DWE_CONFLUX;
         }
         case LastSelectorDwellings.Cove: {
-            return SELECT_OBJECT;
+            return SELECT_DWE_SWAMP;
         }
         case LastSelectorDwellings.Dungeon: {
-            return SELECT_BANKS;
+            return SELECT_DWE_DUNGEON;
         }
         case LastSelectorDwellings.Fortress: {
-            return SELECT_MINES;
+            return SELECT_DWE_FORTRESS;
         }
         case LastSelectorDwellings.Inferno: {
-            return SELECT_OBJECT;
+            return SELECT_DWE_INFERNO;
         }
         case LastSelectorDwellings.Necropolis: {
-            return SELECT_MINES;
+            return SELECT_DWE_NECROPOLIS;
         }
         case LastSelectorDwellings.Rampart: {
-            return SELECT_OBJECT;
+            return SELECT_DWE_RAMPART;
         }
         case LastSelectorDwellings.Stronghold: {
-            return SELECT_OBJECT;
+            return SELECT_DWE_STRONGHOLD;
         }
         case LastSelectorDwellings.Tower: {
-            return SELECT_OBJECT;
+            return SELECT_DWE_TOWER;
         }
         default:
         case LastSelectorDwellings.Castle: {
-            return SELECT_BANKS;
+            return SELECT_DWE_CASTLE;
         }
     }
 }

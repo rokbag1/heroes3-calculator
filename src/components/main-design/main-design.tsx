@@ -22,6 +22,10 @@ export const MainDesign: React.FC = () => {
         setItems(items.concat(lastSelectedItem));
     };
 
+    const removeItem = (itemToRemove: ItemSwitch): void => {
+        setItems(items.filter(item => item.id !== itemToRemove.id));
+    };
+
     return (
         //Main stuff in website
         //Context provides hook data for all children inside wrapped components
@@ -34,7 +38,8 @@ export const MainDesign: React.FC = () => {
                 quantity: quantity,
                 setQuantity: setQuantity,
                 items: items,
-                setItems: pushToItems
+                setItems: pushToItems,
+                removeItem: removeItem
             }}
         >
             <div className="body-class">

@@ -10,6 +10,7 @@ export interface MainContext {
     setQuantity: React.Dispatch<React.SetStateAction<Quantity | null>>;
     items: ItemSwitch[];
     setItems: (itemToPush: ItemSwitch) => void;
+    removeItem: (itemToRemove: ItemSwitch) => void;
 }
 
 export const MainContext = createContext<MainContext>({
@@ -20,5 +21,6 @@ export const MainContext = createContext<MainContext>({
     quantity: null,
     setQuantity: () => {},
     items: [],
-    setItems: () => {}
+    setItems: () => {},
+    removeItem: () => {}
 });

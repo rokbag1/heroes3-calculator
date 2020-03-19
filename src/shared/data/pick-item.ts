@@ -1862,43 +1862,43 @@ export const SELECT_DWE_CASTLE: ItemSwitch[] = [
     {
         id: 3600,
         name: "***",
-        image: "dwellings/castle/CADWE1.gif"
+        image: "buildings/dwellings/castle/CADWE1.gif"
     },
 
     {
         id: 3601,
         name: "***",
-        image: "dwellings/castle/CADWE2.gif"
+        image: "buildings/dwellings/castle/CADWE2.gif"
     },
 
     {
         id: 3602,
         name: "***",
-        image: "dwellings/castle/CADWE3.gif"
+        image: "buildings/dwellings/castle/CADWE3.gif"
     },
 
     {
         id: 3603,
         name: "***",
-        image: "dwellings/castle/CADWE4.gif"
+        image: "buildings/dwellings/castle/CADWE4.gif"
     },
 
     {
         id: 3604,
         name: "***",
-        image: "dwellings/castle/CADWE5.gif"
+        image: "buildings/dwellings/castle/CADWE5.gif"
     },
 
     {
         id: 3605,
         name: "***",
-        image: "dwellings/castle/CADWE6.gif"
+        image: "buildings/dwellings/castle/CADWE6.gif"
     },
 
     {
         id: 3606,
         name: "***",
-        image: "dwellings/castle/CADWE7.gif"
+        image: "buildings/dwellings/castle/CADWE7.gif"
     },
 ];
 
@@ -1906,43 +1906,43 @@ export const SELECT_DWE_CONFLUX: ItemSwitch[] = [
     {
         id: 3610,
         name: "***",
-        image: "dwellings/conflux/CODWE1.gif"
+        image: "buildings/dwellings/conflux/CODWE1.gif"
     },
 
     {
         id: 3611,
         name: "***",
-        image: "dwellings/conflux/CODWE2.gif"
+        image: "buildings/dwellings/conflux/CODWE2.gif"
     },
 
     {
         id: 3612,
         name: "***",
-        image: "dwellings/conflux/CODWE3.gif"
+        image: "buildings/dwellings/conflux/CODWE3.gif"
     },
 
     {
         id: 3613,
         name: "***",
-        image: "dwellings/conflux/CODWE4.gif"
+        image: "buildings/dwellings/conflux/CODWE4.gif"
     },
 
     {
         id: 3614,
         name: "***",
-        image: "dwellings/conflux/CODWE5.gif"
+        image: "buildings/dwellings/conflux/CODWE5.gif"
     },
 
     {
         id: 3615,
         name: "***",
-        image: "dwellings/conflux/CODWE6.gif"
+        image: "buildings/dwellings/conflux/CODWE6.gif"
     },
 
     {
         id: 3616,
         name: "***",
-        image: "dwellings/conflux/CODWE7.gif"
+        image: "buildings/dwellings/conflux/CODWE7.gif"
     },
 ];
 
@@ -1950,43 +1950,43 @@ export const SELECT_DWE_DUNGEON: ItemSwitch[] = [
     {
         id: 3620,
         name: "***",
-        image: "dwellings/dungeon/DUDWE1.gif"
+        image: "buildings/dwellings/dungeon/DUDWE1.gif"
     },
 
     {
         id: 3621,
         name: "***",
-        image: "dwellings/dungeon/DUDWE2.gif"
+        image: "buildings/dwellings/dungeon/DUDWE2.gif"
     },
 
     {
         id: 3622,
         name: "***",
-        image: "dwellings/dungeon/DUDWE3.gif"
+        image: "buildings/dwellings/dungeon/DUDWE3.gif"
     },
 
     {
         id: 3623,
         name: "***",
-        image: "dwellings/dungeon/DUDWE4.gif"
+        image: "buildings/dwellings/dungeon/DUDWE4.gif"
     },
 
     {
         id: 3624,
         name: "***",
-        image: "dwellings/dungeon/DUDWE5.gif"
+        image: "buildings/dwellings/dungeon/DUDWE5.gif"
     },
 
     {
         id: 3625,
         name: "***",
-        image: "dwellings/dungeon/DUDWE6.gif"
+        image: "buildings/dwellings/dungeon/DUDWE6.gif"
     },
 
     {
         id: 3626,
         name: "***",
-        image: "dwellings/dungeon/DUDWE7.gif"
+        image: "buildings/dwellings/dungeon/DUDWE7.gif"
     },
 ];
 
@@ -1994,43 +1994,43 @@ export const SELECT_DWE_FORTRESS: ItemSwitch[] = [
     {
         id: 3630,
         name: "***",
-        image: "dwellings/fortress/FODWE1.gif"
+        image: "buildings/dwellings/fortress/FODWE1.gif"
     },
 
     {
         id: 3631,
         name: "***",
-        image: "dwellings/fortress/FODWE2.gif"
+        image: "buildings/dwellings/fortress/FODWE2.gif"
     },
 
     {
         id: 3632,
         name: "***",
-        image: "dwellings/fortress/FODWE3.gif"
+        image: "buildings/dwellings/fortress/FODWE3.gif"
     },
 
     {
         id: 3633,
         name: "***",
-        image: "dwellings/fortress/FODWE4.gif"
+        image: "buildings/dwellings/fortress/FODWE4.gif"
     },
 
     {
         id: 3634,
         name: "***",
-        image: "dwellings/fortress/FODWE5.gif"
+        image: "buildings/dwellings/fortress/FODWE5.gif"
     },
 
     {
         id: 3635,
         name: "***",
-        image: "dwellings/fortress/FODWE6.gif"
+        image: "buildings/dwellings/fortress/FODWE6.gif"
     },
 
     {
         id: 3636,
         name: "***",
-        image: "dwellings/fortress/FODWE7.gif"
+        image: "buildings/dwellings/fortress/FODWE7.gif"
     },
 ];
 
@@ -2038,43 +2038,43 @@ export const SELECT_DWE_INFERNO: ItemSwitch[] = [
     {
         id: 3640,
         name: "***",
-        image: "dwellings/inferno/INDWE1.gif"
+        image: "buildings/dwellings/inferno/INDWE1.gif"
     },
 
     {
         id: 3641,
         name: "***",
-        image: "dwellings/inferno/INDWE2.gif"
+        image: "buildings/dwellings/inferno/INDWE2.gif"
     },
 
     {
         id: 3642,
         name: "***",
-        image: "dwellings/inferno/INDWE3.gif"
+        image: "buildings/dwellings/inferno/INDWE3.gif"
     },
 
     {
         id: 3643,
         name: "***",
-        image: "dwellings/inferno/INDWE4.gif"
+        image: "buildings/dwellings/inferno/INDWE4.gif"
     },
 
     {
         id: 3644,
         name: "***",
-        image: "dwellings/inferno/INDWE5.gif"
+        image: "buildings/dwellings/inferno/INDWE5.gif"
     },
 
     {
         id: 3645,
         name: "***",
-        image: "dwellings/inferno/INDWE6.gif"
+        image: "buildings/dwellings/inferno/INDWE6.gif"
     },
 
     {
         id: 3646,
         name: "***",
-        image: "dwellings/inferno/INDWE7.gif"
+        image: "buildings/dwellings/inferno/INDWE7.gif"
     },
 ];
 
@@ -2082,43 +2082,43 @@ export const SELECT_DWE_NECROPOLIS: ItemSwitch[] = [
     {
         id: 3650,
         name: "***",
-        image: "dwellings/necropolis/NEDWE1.gif"
+        image: "buildings/dwellings/necropolis/NEDWE1.gif"
     },
 
     {
         id: 3651,
         name: "***",
-        image: "dwellings/necropolis/NEDWE2.gif"
+        image: "buildings/dwellings/necropolis/NEDWE2.gif"
     },
 
     {
         id: 3652,
         name: "***",
-        image: "dwellings/necropolis/NEDWE3.gif"
+        image: "buildings/dwellings/necropolis/NEDWE3.gif"
     },
 
     {
         id: 3653,
         name: "***",
-        image: "dwellings/necropolis/NEDWE4.gif"
+        image: "buildings/dwellings/necropolis/NEDWE4.gif"
     },
 
     {
         id: 3654,
         name: "***",
-        image: "dwellings/necropolis/NEDWE5.gif"
+        image: "buildings/dwellings/necropolis/NEDWE5.gif"
     },
 
     {
         id: 3655,
         name: "***",
-        image: "dwellings/necropolis/NEDWE6.gif"
+        image: "buildings/dwellings/necropolis/NEDWE6.gif"
     },
 
     {
         id: 3656,
         name: "***",
-        image: "dwellings/necropolis/NEDWE7.gif"
+        image: "buildings/dwellings/necropolis/NEDWE7.gif"
     },
 ];
 
@@ -2126,43 +2126,43 @@ export const SELECT_DWE_RAMPART: ItemSwitch[] = [
     {
         id: 3660,
         name: "***",
-        image: "dwellings/rampart/RADWE1.gif"
+        image: "buildings/dwellings/rampart/RADWE1.gif"
     },
 
     {
         id: 3661,
         name: "***",
-        image: "dwellings/rampart/RADWE2.gif"
+        image: "buildings/dwellings/rampart/RADWE2.gif"
     },
 
     {
         id: 3662,
         name: "***",
-        image: "dwellings/rampart/RADWE3.gif"
+        image: "buildings/dwellings/rampart/RADWE3.gif"
     },
 
     {
         id: 3663,
         name: "***",
-        image: "dwellings/rampart/RADWE4.gif"
+        image: "buildings/dwellings/rampart/RADWE4.gif"
     },
 
     {
         id: 3664,
         name: "***",
-        image: "dwellings/rampart/RADWE5.gif"
+        image: "buildings/dwellings/rampart/RADWE5.gif"
     },
 
     {
         id: 3665,
         name: "***",
-        image: "dwellings/rampart/RADWE6.gif"
+        image: "buildings/dwellings/rampart/RADWE6.gif"
     },
 
     {
         id: 3666,
         name: "***",
-        image: "dwellings/rampart/RADWE7.gif"
+        image: "buildings/dwellings/rampart/RADWE7.gif"
     },
 ];
 
@@ -2170,43 +2170,43 @@ export const SELECT_DWE_STRONGHOLD: ItemSwitch[] = [
     {
         id: 3670,
         name: "***",
-        image: "dwellings/stronghold/STDWE1.gif"
+        image: "buildings/dwellings/stronghold/STDWE1.gif"
     },
 
     {
         id: 3671,
         name: "***",
-        image: "dwellings/stronghold/STDWE2.gif"
+        image: "buildings/dwellings/stronghold/STDWE2.gif"
     },
 
     {
         id: 3672,
         name: "***",
-        image: "dwellings/stronghold/STDWE3.gif"
+        image: "buildings/dwellings/stronghold/STDWE3.gif"
     },
 
     {
         id: 3673,
         name: "***",
-        image: "dwellings/stronghold/STDWE4.gif"
+        image: "buildings/dwellings/stronghold/STDWE4.gif"
     },
 
     {
         id: 3674,
         name: "***",
-        image: "dwellings/stronghold/STDWE5.gif"
+        image: "buildings/dwellings/stronghold/STDWE5.gif"
     },
 
     {
         id: 3675,
         name: "***",
-        image: "dwellings/stronghold/STDWE6.gif"
+        image: "buildings/dwellings/stronghold/STDWE6.gif"
     },
 
     {
         id: 3676,
         name: "***",
-        image: "dwellings/stronghold/STDWE7.gif"
+        image: "buildings/dwellings/stronghold/STDWE7.gif"
     },
 ];
 
@@ -2214,43 +2214,43 @@ export const SELECT_DWE_SWAMP: ItemSwitch[] = [
     {
         id: 3680,
         name: "***",
-        image: "dwellings/swamp/SWDWE1.gif"
+        image: "buildings/dwellings/swamp/SWDWE1.gif"
     },
 
     {
         id: 3681,
         name: "***",
-        image: "dwellings/swamp/SWDWE2.gif"
+        image: "buildings/dwellings/swamp/SWDWE2.gif"
     },
 
     {
         id: 3682,
         name: "***",
-        image: "dwellings/swamp/SWDWE3.gif"
+        image: "buildings/dwellings/swamp/SWDWE3.gif"
     },
 
     {
         id: 3683,
         name: "***",
-        image: "dwellings/swamp/SWDWE4.gif"
+        image: "buildings/dwellings/swamp/SWDWE4.gif"
     },
 
     {
         id: 3684,
         name: "***",
-        image: "dwellings/swamp/SWDWE5.gif"
+        image: "buildings/dwellings/swamp/SWDWE5.gif"
     },
 
     {
         id: 3685,
         name: "***",
-        image: "dwellings/swamp/SWDWE6.gif"
+        image: "buildings/dwellings/swamp/SWDWE6.gif"
     },
 
     {
         id: 3686,
         name: "***",
-        image: "dwellings/swamp/SWDWE7.gif"
+        image: "buildings/dwellings/swamp/SWDWE7.gif"
     },
 ];
 
@@ -2258,42 +2258,42 @@ export const SELECT_DWE_TOWER: ItemSwitch[] = [
     {
         id: 3690,
         name: "***",
-        image: "dwellings/tower/TODWE1.gif"
+        image: "buildings/dwellings/tower/TODWE1.gif"
     },
 
     {
         id: 3691,
         name: "***",
-        image: "dwellings/tower/TODWE2.gif"
+        image: "buildings/dwellings/tower/TODWE2.gif"
     },
 
     {
         id: 3692,
         name: "***",
-        image: "dwellings/tower/TODWE3.gif"
+        image: "buildings/dwellings/tower/TODWE3.gif"
     },
 
     {
         id: 3693,
         name: "***",
-        image: "dwellings/tower/TODWE4.gif"
+        image: "buildings/dwellings/tower/TODWE4.gif"
     },
 
     {
         id: 3694,
         name: "***",
-        image: "dwellings/tower/TODWE5.gif"
+        image: "buildings/dwellings/tower/TODWE5.gif"
     },
 
     {
         id: 3695,
         name: "***",
-        image: "dwellings/tower/TODWE6.gif"
+        image: "buildings/dwellings/tower/TODWE6.gif"
     },
 
     {
         id: 3696,
         name: "***",
-        image: "dwellings/tower/TODWE7.gif"
+        image: "buildings/dwellings/tower/TODWE7.gif"
     },
 ];

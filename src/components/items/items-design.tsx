@@ -58,19 +58,22 @@ const LastSelector = (props: LastSelectorProp): JSX.Element => {
     const context = useContext(MainContext);
 
     let selectorArray = null;
-
     switch (props.selector?.name) {
         case "Items": {
             selectorArray = props.secSelector?.id != null ? getLastItem(props.secSelector?.name as LastSelectorItems) : null;
+            break;
         }
         case "Buildings": {
             selectorArray = props.secSelector?.id != null ? getLastBuilding(props.secSelector?.name as LastSelectorBuildings) : null;
+            break;
         }
         case "Dwellings": {
             selectorArray = props.secSelector?.id != null ? getLastDwelling(props.secSelector?.name as LastSelectorDwellings) : null;
+            break;
         }
         default: {
             selectorArray = props.secSelector?.id != null ? getLastItem(props.secSelector?.name as LastSelectorItems) : null;
+            break;
         }
     }
 
@@ -103,7 +106,16 @@ const FormattedItem = (): JSX.Element => {
     return (
         <div className="">
             {context.items.map(item => {
-                return <img key={item.id} src={`src/images/${item.image}`} alt="" />;
+                return (
+                    <img
+                        key={item.id}
+                        src={`src/images/${item.image}`}
+                        alt=""
+                        onClick={() => {
+                            context.removeItem(item);
+                        }}
+                    />
+                );
             })}
         </div>
     );
