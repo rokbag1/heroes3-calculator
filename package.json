@@ -34,9 +34,13 @@
     },
     "dependencies": {
         "@babel/polyfill": "7.6.0",
+        "@fortawesome/fontawesome-svg-core": "^1.2.27",
+        "@fortawesome/free-solid-svg-icons": "^5.12.1",
+        "@fortawesome/react-fontawesome": "^0.1.9",
         "@types/history": "^4.7.3",
         "react": "16.8.6",
         "react-dom": "16.8.6",
+        "react-fontawesome": "^1.7.1",
         "react-router-dom": "^5.1.2"
     }
 }

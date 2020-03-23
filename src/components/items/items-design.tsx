@@ -1,13 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-// import { Towns } from "src/shared/constants";
 import { MainContext } from "../main-design/main-context";
 import { ART_BUI_SELECTOR } from "src/shared/data/pick-item";
 import { ItemSwitch, SecondItemSwitch, LastItemSwitch } from "../main-design/contracts";
 import { getSwitchArray, getLastItem, getLastBuilding, getLastDwelling } from "../../shared/helpers/item-switch-helpers";
 import { Selectors, LastSelectorDwellings, LastSelectorItems, LastSelectorBuildings } from "src/shared/constants";
-
-// import { getCreaturesArray } from "src/shared/helpers/creature-helpers";
 
 //First selector if element is artifact building or dwelling
 const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Element => {
@@ -16,7 +15,7 @@ const SelectArtifactOrBuilding = (props: SelectArtifactOrBuildingProps): JSX.Ele
             <div className="type">
                 {ART_BUI_SELECTOR.map(item => (
                     <div
-                        className={`artifact_building-selector ${item.id === props.selector?.id ? "picked-item" : ""}`}
+                        className={`artifact_building-selector item-selectors ${item.id === props.selector?.id ? "picked-item" : ""}`}
                         key={item.id}
                         onClick={() => (props.setSelector != null ? props.setSelector(item) : null)}
                     >
@@ -39,7 +38,9 @@ const SecondSelector = (props: SecondSelectorProp): JSX.Element => {
                 {selectorArray != null
                     ? selectorArray.map(item => (
                           <div
-                              className={`artifact_building-selector ${item.id === props.secSelector?.id ? "picked-item" : ""}`}
+                              className={`artifact_building-selector item-selectors ${
+                                  item.id === props.secSelector?.id ? "picked-item" : ""
+                              }`}
                               key={item.id}
                               onClick={() => props.secSetSelector(item)}
                           >
@@ -78,24 +79,22 @@ const LastSelector = (props: LastSelectorProp): JSX.Element => {
     }
 
     return (
-        <div className="artifact-building-container second-item-selector">
-            <div className="type">
-                {selectorArray != null
-                    ? selectorArray.map(item => (
-                          <div
-                              className={`artifact_building-selector ${item.id === props.lastSelector?.id ? "picked-item" : ""}`}
-                              key={item.id}
-                              onClick={() => {
-                                  props.lastSetSelector(item);
-                                  context.setItems(item);
-                              }}
-                          >
-                              <img src={`src/images/${item.image}`} />
-                              <div>{item.name}</div>
-                          </div>
-                      ))
-                    : null}
-            </div>
+        <div className="type">
+            {selectorArray != null
+                ? selectorArray.map(item => (
+                      <div
+                          className={`artifact_building-selector item-selectors ${item.id === props.lastSelector?.id ? "picked-item" : ""}`}
+                          key={item.id}
+                          onClick={() => {
+                              props.lastSetSelector(item);
+                              context.setItems(item);
+                          }}
+                      >
+                          <img src={`src/images/${item.image}`} />
+                          <div>{item.name}</div>
+                      </div>
+                  ))
+                : null}
         </div>
     );
 };
@@ -104,17 +103,20 @@ const FormattedItem = (): JSX.Element => {
     const context = useContext(MainContext);
 
     return (
-        <div className="">
+        <div className="artifact-building-container formatedItems">
             {context.items.map(item => {
                 return (
-                    <img
-                        key={item.id}
-                        src={`src/images/${item.image}`}
-                        alt=""
-                        onClick={() => {
-                            context.removeItem(item);
-                        }}
-                    />
+                    <div className="item">
+                        <FontAwesomeIcon icon={faCoffee} />
+                        <img
+                            key={item.id}
+                            src={`src/images/${item.image}`}
+                            alt=""
+                            onClick={() => {
+                                context.removeItem(item);
+                            }}
+                        />
+                    </div>
                 );
             })}
         </div>
@@ -156,18 +158,20 @@ export const ItemDesign: React.FC = () => {
             <div className="calculator-block-title add-item">Add Item</div>
             <div className="pick-item-flex">
                 <SelectArtifactOrBuilding selector={selector} setSelector={setSelector} />
-                {castleContext.town != null && selector?.name != null ? (
+                {selector?.name != null ? (
                     <SecondSelector secSelector={secSelector} secSetSelector={secSetSelector} selector={selector} />
                 ) : null}
-                {secSelector?.name != null ? (
-                    <LastSelector
-                        selector={selector}
-                        lastSelector={lastSelector}
-                        lastSetSelector={lastSetSelector}
-                        secSelector={secSelector}
-                        secSetSelector={secSetSelector}
-                    />
-                ) : null}
+                <div className="artifact-building-container second-item-selector">
+                    {secSelector?.name != null ? (
+                        <LastSelector
+                            selector={selector}
+                            lastSelector={lastSelector}
+                            lastSetSelector={lastSetSelector}
+                            secSelector={secSelector}
+                            secSetSelector={secSetSelector}
+                        />
+                    ) : null}
+                </div>
 
                 <FormattedItem />
             </div>

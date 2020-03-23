@@ -1,5 +1,4 @@
 @import "@styles/variables.scss";
-
 .body-class {
     .body-block {
         display: flex;
@@ -117,7 +116,27 @@
         display: flex;
         justify-content: flex-start;
 
+        .formatedItems {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .item {
+                cursor: pointer;
+                justify-self: center;
+
+                &:hover {
+                    opacity: 0.75;
+                }
+
+                img {
+                    width: 60px;
+                }
+            }
+        }
+
         .artifact-building-container {
+            width: 30%;
             overflow-y: auto;
             border-right: 1px solid $yellow;
             padding: 1rem;
