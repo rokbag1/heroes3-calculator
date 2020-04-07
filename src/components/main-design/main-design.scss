@@ -1,4 +1,5 @@
 @import "@styles/variables.scss";
+
 .body-class {
     .body-block {
         display: flex;
@@ -51,6 +52,131 @@
     .add-item {
         margin-bottom: 0;
         border-bottom: 1px solid $yellow;
+    }
+
+    //Css for week input
+    .week-input {
+        display: flex;
+        font-weight: bold;
+        padding: 0 5px;
+        margin-bottom: 1rem;
+        color: $yellow;
+        margin-top: 1rem;
+
+        input {
+            color: $yellow;
+            background-color: unset;
+            border: 1px solid $yellow;
+            margin-left: 1rem;
+            width: 3rem;
+        }
+    }
+
+    .submit-button {
+        text-align: center;
+
+        .button {
+            border: 1px solid $yellow;
+            margin-top: 2rem;
+            background-color: unset;
+            color: $yellow;
+            width: 10rem;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 2rem;
+
+            &:hover {
+                cursor: pointer;
+                background: rgba($color: $brown, $alpha: 0.5);
+            }
+        }
+
+         //Important is for npm package
+         .popup-content  {
+            background: none !important;
+            width: 450px !important;
+            border: none !important;
+        
+        }
+
+        .modal {
+            background-image: url("../../images/heroes-main-background.jpg");
+            border: 1px solid $yellow;
+            padding: 1rem;
+
+            .title {
+                font-weight: bold;
+                color: $yellow;
+                font-size: 1rem;
+            }
+
+            .content {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+                color: $yellow;
+                font-weight: bold;
+                font-size: 1rem;
+                margin-top: 2rem;
+
+                .number {
+                    margin: 0 0.2rem;
+                    font-size: 18px;
+                }
+
+                .name {
+                    font-size: 18px;
+                }
+                
+                img {
+                    margin-left: 1rem;
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: space-around;
+
+                button {
+                    border: 1px solid $yellow;
+                    margin-top: 2rem;
+                    background-color: unset;
+                    color: $yellow;
+                    font-weight: bold;
+                    padding: 1rem;
+                    cursor: pointer;
+                    font-size: 1rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        background: rgba($color: $brown, $alpha: 0.5);
+                    }
+                }
+            }
+
+            .conclusion {
+                margin-top: 1rem;
+                font-weight: bold;
+                color: $yellow;
+                font-size: 1rem;
+            }
+        }
+        
+        .modal > .close {
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            padding: 2px 5px;
+            line-height: 20px;
+            right: -10px;
+            top: -10px;
+            font-size: 24px;
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #cfcece;
+        }
     }
 
     //Outline must be same as padding, outline must fit
@@ -122,11 +248,26 @@
             justify-content: space-between;
 
             .item {
+                position: relative;
                 cursor: pointer;
                 justify-self: center;
 
                 &:hover {
                     opacity: 0.75;
+
+                    .icon {
+                        width: 12px;
+                        height: 12px;
+                        transition: width 0.1s, height 0.1s;
+                    }
+                }
+
+                .icon {
+                    width: 10px;
+                    height: 10px;
+                    right: 0;
+                    position: absolute;
+                    color: red;
                 }
 
                 img {
@@ -156,8 +297,8 @@
                     height: 380px;
                     overflow-y: scroll;
                 }
-    
-               .artifact_building-selector {
+
+                .artifact_building-selector {
                     color: $yellow;
                     font-weight: bold;
                     font-size: 12px;
@@ -167,11 +308,11 @@
                     align-items: center;
                     border: 1px solid $yellow;
                     cursor: pointer;
-    
+
                     img {
                         width: 2rem;
                     }
-    
+
                     div {
                         padding-left: 1rem;
 
@@ -187,21 +328,32 @@
                     &.picked-item {
                         // outline: 2px solid $yellow;
                         background: rgba($color: $yellow, $alpha: 0.2);
-        
+
                         &:hover {
                             cursor: pointer;
                             background: rgba($color: $yellow, $alpha: 0.3);
                         }
                     }
-        
+
                     &:hover {
                         cursor: pointer;
                         background: rgba($color: $brown, $alpha: 0.5);
                     }
-    
                 }
-    
             }
         }
     }
+}
+
+//Remove input arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }

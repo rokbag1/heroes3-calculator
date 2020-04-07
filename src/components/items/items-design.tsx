@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faTimesCircle} from '@fortawesome/free-solid-svg-icons'
 
 import { MainContext } from "../main-design/main-context";
 import { ART_BUI_SELECTOR } from "src/shared/data/pick-item";
@@ -107,7 +107,7 @@ const FormattedItem = (): JSX.Element => {
             {context.items.map(item => {
                 return (
                     <div className="item">
-                        <FontAwesomeIcon icon={faCoffee} />
+                        <FontAwesomeIcon className="icon" icon={faTimesCircle} />
                         <img
                             key={item.id}
                             src={`src/images/${item.image}`}

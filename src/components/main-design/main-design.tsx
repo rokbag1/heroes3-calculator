@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import { AppHistory } from "@routing/app-history";
 // import { AppRoutesPaths } from "@routing/app-routes-paths";
 
-import { Town, Creature, Quantity, Item, ItemSwitch } from "./contracts";
+import { Town, Creature, Quantity, ItemSwitch, Week } from "./contracts";
 import { MainContext } from "./main-context";
 import { TownDesign } from "../towns/town-design";
 import { CreatureDesign } from "../creatures/creature-design";
@@ -11,12 +11,14 @@ import { QuantityDesign } from "../quantity/quantity-design";
 import { ItemDesign } from "../items/items-design";
 
 import "./main-design.scss";
+import { WeekDesign } from "../weeks/weeks";
 
 export const MainDesign: React.FC = () => {
     const [town, setTown] = useState<Town | null>(null);
     const [creature, setCreature] = useState<Creature | null>(null);
     const [quantity, setQuantity] = useState<Quantity | null>(null);
     const [items, setItems] = useState<ItemSwitch[]>([]);
+    const [week, setWeek] = useState<Week | null>(null);
 
     const pushToItems = (lastSelectedItem: ItemSwitch): void => {
         setItems(items.concat(lastSelectedItem));
@@ -40,7 +42,9 @@ export const MainDesign: React.FC = () => {
                 setQuantity: setQuantity,
                 items: items,
                 setItems: pushToItems,
-                removeItem: removeItem
+                removeItem: removeItem,
+                week: week,
+                setWeek: setWeek,
             }}
         >
             <div className="body-class">
@@ -61,14 +65,14 @@ export const MainDesign: React.FC = () => {
                         <CreatureDesign />
                     </div>
                     <div className="quantity">
-                        {" "}
-                        {/* Item can also be building */}
                         <QuantityDesign />
                     </div>
                     <div className="item">
                         <ItemDesign />
                     </div>
-                    <div className="week"> {/*  */}</div>
+                    <div className="week">
+                        <WeekDesign />
+                    </div>
                 </div>
             </div>
         </MainContext.Provider>
