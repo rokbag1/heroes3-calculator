@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Town, Creature, Quantity, Item, ItemSwitch } from "./contracts";
+import { Town, Creature, Quantity, ItemSwitch, Week } from "./contracts";
 
 export interface MainContext {
     town: Town | null;
@@ -11,6 +11,8 @@ export interface MainContext {
     items: ItemSwitch[];
     setItems: (itemToPush: ItemSwitch) => void;
     removeItem: (itemToRemove: ItemSwitch) => void;
+    week: Week | null;
+    setWeek: React.Dispatch<React.SetStateAction<Week | null>>;
 }
 
 export const MainContext = createContext<MainContext>({
@@ -22,5 +24,7 @@ export const MainContext = createContext<MainContext>({
     setQuantity: () => {},
     items: [],
     setItems: () => {},
-    removeItem: () => {}
+    removeItem: () => {},
+    week: null,
+    setWeek: () => {}
 });

@@ -42,3 +42,13 @@ export interface LastItemSwitch {
     name: string;
     image: string;
 }
+
+export interface Week {
+    value: string;
+}
+
+export interface Conclusion {
+    minPower: number;
+    maxPower: number;
+    text: string;
+}
